@@ -129,7 +129,7 @@ const Hero = () => {
                   {/* Professional headshot */}
                   <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10">
                     <Image
-                      src="/profile.png"
+                      src="/images/profile/profile.png"
                       alt={`${siteConfig.personal.name} - Professional headshot`}
                       width={384}
                       height={384}

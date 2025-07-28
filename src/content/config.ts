@@ -3,7 +3,7 @@ export const siteConfig = {
   // Personal Information
   personal: {
     name: "Tehseen Dahya",
-    bio: "Student in Toronto working on technology solutions to reduce global inequity. I'm passionate about building meaningful relationships, pursuing personal growth, and advancing communities through innovative technology.",
+    bio: "Student in Toronto working on ML, Web3, and climate tech solutions. Passionate about using technology to reduce global inequity and create opportunities for everyone.",
     location: "Toronto & North Carolina",
     email: "hello@tehseendahya.com",
     status: "Building cool stuff",
@@ -297,6 +297,7 @@ export const siteConfig = {
   // Navigation
   navigation: [
     { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
     { name: "Projects", href: "/projects" },
     { name: "Writing", href: "/writing" },
   ],

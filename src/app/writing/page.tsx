@@ -52,18 +52,9 @@ export default function WritingPage() {
                         {/* Cover Image */}
                         <div className="md:col-span-1">
                           <div className="h-64 md:h-full bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center relative overflow-hidden">
-                                                         {post.coverImage ? (
-                               <Image
-                                 src={`/images/writing/post-${index + 1}.jpg`}
-                                 alt={post.title}
-                                 fill
-                                 className="object-cover"
-                               />
-                             ) : (
-                               <div className="text-4xl">
-                                 {post.source === "Medium" ? "📝" : "📖"}
-                               </div>
-                             )}
+                            <div className="text-4xl">
+                              {post.source === "Medium" ? "📝" : "📖"}
+                            </div>
                           </div>
                         </div>
                         
