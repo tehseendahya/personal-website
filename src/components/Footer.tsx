@@ -25,7 +25,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-foreground mb-4">Tehseen Dahya</h3>
             <p className="text-muted-foreground mb-4">
               Developer, innovator, and changemaker working on technology solutions to reduce global inequity. 
-              Currently a student in Toronto with expertise in ML, Web3, and climate tech.
+              Currently a student from Toronto with expertise in ML, Web3, and climate tech.
             </p>
             <div className="flex space-x-4">
               <Link
@@ -82,7 +82,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold text-foreground mb-4">Get in Touch</h3>
             <ul className="space-y-2">
-              <li className="text-muted-foreground">📍 Toronto, Canada</li>
+              <li className="text-muted-foreground">📍 Toronto & North Carolina</li>
               <li>
                 <button
                   onClick={handleEmailCopy}

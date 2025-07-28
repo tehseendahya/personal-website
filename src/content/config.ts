@@ -3,11 +3,10 @@ export const siteConfig = {
   // Personal Information
   personal: {
     name: "Tehseen Dahya",
-    tagline: "A developer, an innovator, a changemaker",
     bio: "Student in Toronto working on technology solutions to reduce global inequity. I'm passionate about building meaningful relationships, pursuing personal growth, and advancing communities through innovative technology.",
-    location: "Toronto, Canada",
+    location: "Toronto & North Carolina",
     email: "hello@tehseendahya.com",
-    status: "Available for opportunities",
+    status: "Building cool stuff",
     expertise: ["Full Stack Development", "AI/ML", "Web3 & Blockchain"],
     values: ["close relationships", "personal growth", "community advancement"],
   },

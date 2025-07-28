@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 
 const Newsletter = () => {
@@ -45,39 +44,9 @@ const Newsletter = () => {
                 </p>
               </div>
 
-              <div className="bg-card p-6 rounded-lg border border-border">
-                <h3 className="text-lg font-semibold text-foreground mb-4">
-                  Subscribe to My Newsletter
-                </h3>
-                <form className="space-y-4">
-                  <Input
-                    type="email"
-                    placeholder="Enter your email address"
-                    className="w-full"
-                  />
-                  <Button type="submit" className="w-full">
-                    Subscribe Now
-                  </Button>
-                </form>
-                <p className="text-sm text-muted-foreground mt-3">
-                  By subscribing, you agree to receive monthly updates. Unsubscribe anytime.
-                </p>
-              </div>
+             
 
-              <div className="mt-6 flex items-center space-x-4 text-sm text-muted-foreground">
-                <div className="flex items-center space-x-2">
-                  <span>📬</span>
-                  <span>Monthly updates</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <span>🎯</span>
-                  <span>Quality over quantity</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <span>🚫</span>
-                  <span>No spam</span>
-                </div>
-              </div>
+              
             </div>
 
             {/* Recent Posts */}

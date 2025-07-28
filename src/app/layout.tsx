@@ -13,11 +13,19 @@ export const metadata: Metadata = {
     default: "Tehseen Dahya - Developer & Innovator",
     template: "%s | Tehseen Dahya"
   },
-  description: "Student in Toronto working on technology solutions to reduce global inequity. Machine Learning, Web3, and climate tech projects.",
+  description: "Student from Toronto working on technology solutions to reduce global inequity. Machine Learning, Web3, and climate tech projects.",
   keywords: ["developer", "machine learning", "web3", "toronto", "innovation", "technology", "climate tech", "blockchain"],
   authors: [{ name: "Tehseen Dahya" }],
   creator: "Tehseen Dahya",
   metadataBase: new URL("https://tehseendahya.com"),
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", type: "image/x-icon" }
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -60,10 +68,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <head>
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-      </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         <SpeedInsights />
         {children}
