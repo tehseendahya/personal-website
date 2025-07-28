@@ -27,7 +27,7 @@ const Hero = () => {
             <div className="order-2 lg:order-1 animate-slide-up">
               <div className="mb-6">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                  Hi, I'm{" "}
+                  Hi, I&apos;m{" "}
                   <span className="text-primary">{siteConfig.personal.name}</span>
                 </h1>
                 <div className="mt-4 text-xl sm:text-2xl text-muted-foreground">

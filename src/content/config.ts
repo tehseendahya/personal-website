@@ -387,5 +387,4 @@ export const projectDetails = {
 };
 
 export type ProjectCategory = "personal" | "consulting" | "hackathons";
-export type Project = typeof siteConfig.projects[0];
-export type BlogPost = typeof siteConfig.blogPosts[0]; 
+export type Project = typeof siteConfig.projects[0]; 

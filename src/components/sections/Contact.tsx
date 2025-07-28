@@ -13,10 +13,10 @@ const Contact = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              Let's Work Together
+              Let&apos;s Work Together
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              I'm always interested in discussing new opportunities, collaborations, 
+              I&apos;m always interested in discussing new opportunities, collaborations, 
               and innovative projects that can make a positive impact.
             </p>
           </div>
@@ -159,7 +159,7 @@ const Contact = () => {
                     <h4 className="font-semibold text-foreground">Available for Opportunities</h4>
                   </div>
                   <p className="text-muted-foreground mb-4">
-                    I'm currently open to new opportunities in:
+                    I&apos;m currently open to new opportunities in:
                   </p>
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li className="flex items-center space-x-2">

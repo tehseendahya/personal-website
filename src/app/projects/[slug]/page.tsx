@@ -11,58 +11,6 @@ import { projectDetails } from "@/content/config";
 
 // Import projects from centralized config
 const projects = projectDetails;
-    overview: "This project addresses one of the most critical challenges in modern energy infrastructure: accurate electricity demand forecasting. By leveraging advanced machine learning techniques and time series analysis, the system enables grid operators to optimize energy distribution and integrate renewable sources more effectively.",
-    challenge: "Traditional electricity demand forecasting methods often struggle with the increasing complexity of modern grids, renewable energy integration, and changing consumption patterns. The challenge was to develop a system that could handle these complexities while providing accurate, real-time predictions.",
-    solution: "Developed a sophisticated ML pipeline using TensorFlow and advanced time series models. The system incorporates weather data, historical consumption patterns, economic indicators, and renewable energy production forecasts to provide highly accurate demand predictions.",
-    results: [
-      "23% improvement in prediction accuracy compared to traditional methods",
-      "Reduced grid operation costs by 15% through optimized energy dispatch",
-      "Enabled 30% better integration of renewable energy sources",
-      "Decreased carbon emissions by 8% through optimized grid operations"
-    ],
-    technicalDetails: {
-      architecture: "The system uses a multi-layer architecture combining LSTM networks for time series prediction, ensemble methods for improved accuracy, and real-time data processing pipelines.",
-      algorithms: "Implemented advanced algorithms including Long Short-Term Memory (LSTM) networks, Random Forest ensembles, and Gaussian Process regression for uncertainty quantification.",
-      dataProcessing: "Handles over 50,000 data points per hour from smart meters, weather stations, and grid sensors, with real-time preprocessing and feature engineering.",
-      deployment: "Deployed on cloud infrastructure with auto-scaling capabilities, ensuring 99.9% uptime and sub-second prediction response times."
-    },
-    learnings: [
-      "The importance of incorporating external factors like weather and economic indicators in energy forecasting",
-      "Real-time data processing challenges and the need for robust error handling",
-      "The value of ensemble methods in improving prediction reliability",
-      "Grid operator feedback loops are crucial for model improvement"
-    ]
-  },
-  "amazon-alexa-integration": {
-    title: "Amazon Alexa Integration",
-    description: "Led development of voice-enabled features for Amazon's Alexa platform, enhancing user accessibility and interaction patterns.",
-    category: "consulting",
-    technologies: ["Node.js", "AWS Lambda", "Alexa Skills Kit", "Voice UI", "AWS"],
-    impact: "Increased user engagement by 40% through improved voice interactions",
-    githubUrl: undefined,
-    overview: "As part of a consulting engagement with Amazon, I led the development of next-generation voice interaction features for the Alexa platform, focusing on accessibility and natural conversation patterns.",
-    challenge: "Users were struggling with complex voice commands and limited interaction patterns. The existing system had high abandonment rates and poor user satisfaction scores, particularly among elderly and visually impaired users.",
-    solution: "Designed and implemented a comprehensive voice UI system with natural language processing, context awareness, and adaptive learning capabilities. Created intuitive voice flows that felt conversational rather than command-driven.",
-    results: [
-      "40% increase in user engagement and session duration",
-      "65% reduction in voice command errors",
-      "Improved accessibility scores by 80% for users with disabilities",
-      "95% user satisfaction rating in post-deployment surveys"
-    ],
-    technicalDetails: {
-      architecture: "Built using serverless architecture with AWS Lambda, DynamoDB for session management, and Amazon Comprehend for natural language understanding.",
-      algorithms: "Implemented context-aware dialogue management, intent classification with confidence scoring, and adaptive response generation based on user behavior patterns.",
-      dataProcessing: "Real-time processing of voice inputs with sub-100ms response times, handling over 1 million interactions per day.",
-      deployment: "Deployed across multiple AWS regions with automatic failover and load balancing to ensure global availability."
-    },
-    learnings: [
-      "Voice UI design requires fundamentally different thinking than visual interfaces",
-      "Context preservation across conversation turns is crucial for natural interactions",
-      "Accessibility considerations must be built into the core design, not added later",
-      "User testing with diverse groups is essential for inclusive voice experiences"
-    ]
-  }
-};
 
 type ProjectPageProps = {
   params: Promise<{ slug: string }>;
@@ -131,7 +79,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 ))}
               </div>
               <div className="flex space-x-4">
-                {project.githubUrl && (
+                {'githubUrl' in project && project.githubUrl && (
                   <Button asChild>
                     <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                       View on GitHub
@@ -270,7 +218,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 Interested in Similar Projects?
               </h2>
               <p className="text-xl text-muted-foreground mb-8">
-                Let's discuss how we can work together on your next innovative project.
+                Let&apos;s discuss how we can work together on your next innovative project.
               </p>
               <div className="flex justify-center space-x-4">
                 <Button asChild size="lg">
