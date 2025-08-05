@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     default: "Tehseen Dahya - Developer & Innovator",
     template: "%s | Tehseen Dahya"
   },
-  description: "Student from Toronto working on technology solutions to reduce global inequity. Machine Learning, Web3, and climate tech projects.",
+  description: "Student at Duke University working on technology solutions to reduce global inequity. Machine Learning, Web3, and climate tech projects.",
   keywords: ["developer", "machine learning", "web3", "toronto", "innovation", "technology", "climate tech", "blockchain"],
   authors: [{ name: "Tehseen Dahya" }],
   creator: "Tehseen Dahya",
@@ -68,7 +68,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} font-sans antialiased`} suppressHydrationWarning={true}>
         <SpeedInsights />
         {children}
       </body>

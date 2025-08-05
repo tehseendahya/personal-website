@@ -16,7 +16,7 @@ export default function ProjectsPage() {
   const filters = [
     { id: "all", label: "All Projects", count: projects.length },
     { id: "personal", label: "Personal", count: projects.filter(p => p.category === "personal").length },
-    { id: "consulting", label: "Consulting", count: projects.filter(p => p.category === "consulting").length },
+    { id: "contracting", label: "Contract", count: projects.filter(p => p.category === "contracting").length },
     { id: "hackathons", label: "Hackathons", count: projects.filter(p => p.category === "hackathons").length },
   ];
 
@@ -36,20 +36,14 @@ export default function ProjectsPage() {
                 My Projects
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
-                Explore my work across machine learning, Web3, climate tech, and more. 
-                Each project represents a step toward using technology to reduce global inequity.
+                Explore my work across full-stack development, Web3, and more. 
               </p>
-              <div className="flex flex-wrap justify-center gap-3">
-                <Badge className="bg-primary/10 text-primary">19+ Projects</Badge>
-                <Badge className="bg-secondary/10 text-secondary">Multiple Industries</Badge>
-                <Badge className="bg-accent/10 text-accent">Open Source</Badge>
-              </div>
             </div>
           </div>
         </section>
 
         {/* Filter Section */}
-        <section className="py-12 bg-muted/30">
+        <section className="py-6 bg-muted/30">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
               <div className="flex flex-wrap justify-center gap-4 mb-8">

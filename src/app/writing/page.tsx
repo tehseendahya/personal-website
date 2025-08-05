@@ -21,110 +21,104 @@ export default function WritingPage() {
       <Header />
       <main className="pt-16">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-background via-background to-muted/30">
+        <section className="py-16 bg-gradient-to-br from-background to-muted/20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
+              <h1 className="text-5xl sm:text-6xl font-bold text-foreground mb-4">
                 Writing
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
-                Thoughts on technology, innovation, and building solutions that matter. 
-                Personal stories from building, traveling, and learning in the real world.
+                Stories about technology, travel, and building things that matter.
               </p>
-              <div className="flex flex-wrap justify-center gap-3">
-                <Badge className="bg-primary/10 text-primary">Personal Growth</Badge>
-                <Badge className="bg-secondary/10 text-secondary">Technology</Badge>
-                <Badge className="bg-accent/10 text-accent">Global Impact</Badge>
+              
+              {/* Platform Buttons */}
+              <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6">
+                <Button asChild variant="outline" size="lg" className="px-6 py-3 border-2 border-amber-200 bg-amber-50 text-amber-800 hover:border-amber-300 hover:bg-amber-100 transition-all duration-300 hover:scale-105">
+                  <Link href={siteConfig.contact.medium} target="_blank" rel="noopener noreferrer">
+                    📰 Medium Articles
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="lg" className="px-6 py-3 border-2 border-amber-200 bg-amber-50 text-amber-800 hover:border-amber-300 hover:bg-amber-100 transition-all duration-300 hover:scale-105">
+                  <Link href={siteConfig.contact.substack} target="_blank" rel="noopener noreferrer">
+                    💌 Substack Newsletter
+                  </Link>
+                </Button>
               </div>
+              
+              <p className="text-sm text-muted-foreground">
+                Featured posts below • Find my complete writing on Substack
+              </p>
             </div>
           </div>
         </section>
 
         {/* Writing Posts */}
-        <section className="py-16 bg-background">
+        <section className="py-12 bg-background">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto">
-              <div className="space-y-8">
+            <div className="max-w-5xl mx-auto">
+              <div className="space-y-12">
                 {posts.map((post, index) => (
-                  <Card key={index} className="hover:shadow-lg transition-shadow overflow-hidden">
-                    <CardContent className="p-0">
-                      <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
-                        {/* Cover Image */}
-                        <div className="md:col-span-1">
-                          <div className="h-64 md:h-full bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center relative overflow-hidden">
-                            <div className="text-4xl">
-                              {post.source === "Medium" ? "📝" : "📖"}
+                  <Link key={index} href={post.externalUrl} target="_blank" rel="noopener noreferrer" className="block">
+                    <article className="group cursor-pointer">
+                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                      {/* Image */}
+                      <div className="order-2 lg:order-1">
+                        <div className="aspect-[16/10] relative overflow-hidden rounded-xl bg-muted">
+                          {post.coverImage ? (
+                            <Image
+                              src={post.coverImage}
+                              alt={post.title}
+                              fill
+                              className="object-cover transition-all duration-500 group-hover:scale-105"
+                              sizes="(max-width: 768px) 100vw, 50vw"
+                            />
+                          ) : (
+                            <div className="h-full bg-gradient-to-br from-muted to-muted/60 flex items-center justify-center">
+                              <div className="text-6xl opacity-40">
+                                {post.source === "Medium" ? "📰" : "💌"}
+                              </div>
                             </div>
-                          </div>
-                        </div>
-                        
-                        {/* Content */}
-                        <div className="md:col-span-2 p-8">
-                          <div className="flex justify-between items-start mb-4">
-                            <Badge className={post.source === "Medium" ? "bg-secondary/10 text-secondary" : "bg-primary/10 text-primary"}>
-                              {post.source}
-                            </Badge>
-                            <span className="text-sm text-muted-foreground">
-                              {post.date} • {post.readTime}
-                            </span>
-                          </div>
-                          
-                          <h2 className="text-2xl font-bold text-foreground mb-4 hover:text-primary transition-colors">
-                            <Link href={post.externalUrl} target="_blank" rel="noopener noreferrer">
-                              {post.title}
-                            </Link>
-                          </h2>
-                          
-                          <p className="text-muted-foreground leading-relaxed mb-6">
-                            {post.excerpt}
-                          </p>
-                          
-                          <div className="flex flex-wrap gap-2 mb-6">
-                            {post.tags.map((tag) => (
-                              <Badge key={tag} variant="outline" className="text-xs">
-                                {tag}
-                              </Badge>
-                            ))}
-                          </div>
-                          
-                          <div className="flex justify-between items-center">
-                            <Button asChild variant="ghost" className="p-0 h-auto text-primary hover:text-primary/80">
-                              <Link href={post.externalUrl} target="_blank" rel="noopener noreferrer">
-                                Read on {post.source} →
-                              </Link>
-                            </Button>
-                            
-                            <div className="flex space-x-2">
-                              <Button variant="outline" size="sm" asChild>
-                                <Link href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(post.externalUrl)}`} target="_blank" rel="noopener noreferrer">
-                                  Share
-                                </Link>
-                              </Button>
-                            </div>
-                          </div>
+                          )}
                         </div>
                       </div>
-                    </CardContent>
-                  </Card>
+                      
+                      {/* Content */}
+                      <div className="order-1 lg:order-2 space-y-4">
+                        <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                          <Badge variant="secondary" className="capitalize">
+                            {post.source}
+                          </Badge>
+                          <span>{post.date}</span>
+                          <span>•</span>
+                          <span>{post.readTime}</span>
+                        </div>
+                        
+                        <h2 className="text-3xl lg:text-4xl font-bold text-foreground leading-tight group-hover:text-primary transition-colors">
+                          {post.title}
+                        </h2>
+                        
+                        <p className="text-lg text-muted-foreground leading-relaxed">
+                          {post.excerpt}
+                        </p>
+                        
+                        <div className="flex flex-wrap gap-2">
+                          {post.tags.slice(0, 3).map((tag) => (
+                            <span key={tag} className="text-sm text-muted-foreground">
+                              #{tag.toLowerCase().replace(/\s+/g, '')}
+                            </span>
+                          ))}
+                        </div>
+                        
+                        <div className="pt-2">
+                          <span className="text-primary font-medium group-hover:underline">
+                            Read full article →
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    </article>
+                  </Link>
                 ))}
-              </div>
-
-              <div className="text-center mt-12">
-                <p className="text-muted-foreground mb-4">
-                  Want to read more? Follow me on Medium and Substack for regular updates.
-                </p>
-                <div className="flex justify-center space-x-4">
-                  <Button asChild variant="outline">
-                    <Link href={siteConfig.contact.medium} target="_blank" rel="noopener noreferrer">
-                      Medium
-                    </Link>
-                  </Button>
-                  <Button asChild variant="outline">
-                    <Link href={siteConfig.contact.substack} target="_blank" rel="noopener noreferrer">
-                      Substack
-                    </Link>
-                  </Button>
-                </div>
               </div>
             </div>
           </div>

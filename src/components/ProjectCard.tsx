@@ -6,13 +6,15 @@ import { Button } from "@/components/ui/button";
 interface ProjectCardProps {
   title: string;
   description: string;
-  category: "personal" | "consulting" | "hackathons";
-  technologies: string[];
+  category: "personal" | "contracting" | "hackathons";
+  technologies?: string[];
   impact?: string;
   githubUrl?: string;
   demoUrl?: string;
   slug: string;
   featured?: boolean;
+  active?: boolean;
+  comingSoon?: boolean;
 }
 
 const ProjectCard = ({
@@ -25,16 +27,18 @@ const ProjectCard = ({
   demoUrl,
   slug,
   featured = false,
+  active = false,
+  comingSoon = false,
 }: ProjectCardProps) => {
   const categoryColors = {
     personal: "bg-primary/10 text-primary",
-    consulting: "bg-secondary/10 text-secondary",
+    contracting: "bg-secondary/10 text-secondary",
     hackathons: "bg-accent/10 text-accent",
   };
 
   const categoryLabels = {
     personal: "Personal",
-    consulting: "Consulting",
+    contracting: "Contract",
     hackathons: "Hackathon",
   };
 
@@ -45,8 +49,8 @@ const ProjectCard = ({
           <Badge className={categoryColors[category]}>
             {categoryLabels[category]}
           </Badge>
-          {featured && (
-            <Badge variant="secondary">Featured</Badge>
+          {active && (
+            <Badge variant="default" className="bg-green-500 hover:bg-green-600">Currently Working On</Badge>
           )}
         </div>
         <CardTitle className="text-xl group-hover:text-primary transition-colors">
@@ -68,7 +72,7 @@ const ProjectCard = ({
         )}
         
         <div className="flex flex-wrap gap-2">
-          {technologies.map((tech) => (
+          {technologies?.map((tech) => (
             <Badge key={tech} variant="outline" className="text-xs">
               {tech}
             </Badge>
@@ -77,28 +81,36 @@ const ProjectCard = ({
       </CardContent>
       
       <CardFooter className="flex justify-between items-center">
-        <Button asChild variant="ghost" size="sm">
-          <Link href={`/projects/${slug}`}>
-            Learn More
-          </Link>
-        </Button>
+        {comingSoon ? (
+          <Button variant="ghost" size="sm" disabled>
+            More Info Coming Soon
+          </Button>
+        ) : (
+          <Button asChild variant="ghost" size="sm">
+            <Link href={`/projects/${slug}`}>
+              Learn More
+            </Link>
+          </Button>
+        )}
         
-        <div className="flex space-x-2">
-          {githubUrl && (
-            <Button asChild variant="outline" size="sm">
-              <Link href={githubUrl} target="_blank" rel="noopener noreferrer">
-                GitHub
-              </Link>
-            </Button>
-          )}
-          {demoUrl && (
-            <Button asChild variant="outline" size="sm">
-              <Link href={demoUrl} target="_blank" rel="noopener noreferrer">
-                Demo
-              </Link>
-            </Button>
-          )}
-        </div>
+        {!comingSoon && (
+          <div className="flex space-x-2">
+            {githubUrl && (
+              <Button asChild variant="outline" size="sm">
+                <Link href={githubUrl} target="_blank" rel="noopener noreferrer">
+                  GitHub
+                </Link>
+              </Button>
+            )}
+            {demoUrl && (
+              <Button asChild variant="outline" size="sm">
+                <Link href={demoUrl} target="_blank" rel="noopener noreferrer">
+                  Demo
+                </Link>
+              </Button>
+            )}
+          </div>
+        )}
       </CardFooter>
     </Card>
   );

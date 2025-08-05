@@ -42,13 +42,13 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   const categoryColors = {
     personal: "bg-primary/10 text-primary",
-    consulting: "bg-secondary/10 text-secondary",
+    contracting: "bg-secondary/10 text-secondary",
     hackathons: "bg-accent/10 text-accent",
   };
 
   const categoryLabels = {
     personal: "Personal Project",
-    consulting: "Consulting Project",
+    contracting: "Contract Project",
     hackathons: "Hackathon Project",
   };
 
@@ -60,10 +60,15 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <section className="py-20 bg-gradient-to-br from-background via-background to-muted/30">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
-              <div className="mb-6">
+              <div className="mb-6 flex gap-3">
                 <Badge className={categoryColors[project.category as keyof typeof categoryColors]}>
                   {categoryLabels[project.category as keyof typeof categoryLabels]}
                 </Badge>
+                {(project as any).active && (
+                  <Badge variant="default" className="bg-green-500 hover:bg-green-600">
+                    Currently Working On
+                  </Badge>
+                )}
               </div>
               <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
                 {project.title}

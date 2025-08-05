@@ -20,8 +20,8 @@ const ProjectsOverview = () => {
               Featured Projects
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Explore my work across three main categories: personal innovation projects, 
-              professional consulting engagements, and competitive hackathon solutions.
+              Explore my work across three main categories: personal projects, 
+              contract projects, and hackathons.
             </p>
           </div>
 

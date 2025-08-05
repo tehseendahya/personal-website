@@ -48,27 +48,41 @@ export default function AboutPage() {
                   </h1>
                   <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
                     <p>
-                      I&apos;m a student in Toronto who&apos;s genuinely passionate about using technology to tackle some of the world&apos;s biggest challenges. While that might sound ambitious (and maybe a bit naive), I truly believe that thoughtful innovation can help reduce global inequity and create opportunities for everyone.
+                      I&apos;m a student in Toronto who&apos;s genuinely passionate about using technology to tackle some of the world&apos;s 
+                      biggest challenges. While that might sound ambitious (and maybe a bit naive), I truly believe that thoughtful innovation 
+                      can help reduce global inequity and create opportunities for everyone.
                     </p>
                     
                     <p>
-                      My interest in technology-for-good really crystallized during a teaching trip to Moshi, Tanzania. Working with local kids and seeing firsthand how resource constraints affect education made me realize that the problems worth solving aren&apos;t always the flashiest ones - they&apos;re the ones that can genuinely improve people&apos;s daily lives. That experience sparked my focus on building solutions that are accessible and meaningful to real communities.
+                      My interest in technology-for-good really crystallized during a teaching trip to Moshi, Tanzania. Working with local kids 
+                      and seeing firsthand how resource constraints affect education made me realize that the problems worth solving aren&apos;t 
+                      always the flashiest ones - they&apos;re the ones that can genuinely improve people&apos;s daily lives. That experience sparked 
+                      my focus on building solutions that are accessible and meaningful to real communities.
                     </p>
 
                     <p>
-                      Most of my time is spent working on projects that sit at the intersection of machine learning, Web3, and climate tech. I&apos;ve been fortunate to work with companies like Amazon, CIBC, and BenchSci, but honestly, some of my favorite projects have been the late-night hackathon builds and personal experiments that started as &quot;what if we could...&quot; conversations with friends.
+                      Most of my time is spent working on projects that relate some degree of emerging technology with a political or soci-economic 
+                      implication, allowing me to apply both my left and right brain to solve the problem . I&apos;ve been fortunate to work with 
+                      some incredible companies as an intern or contractor, but some of my favorite projects have been the late-night builds 
+                      and personal experiments that started as &quot;what if we could...&quot; conversations with friends.
                     </p>
 
                     <p>
-                      When I&apos;m not coding, you&apos;ll probably find me exploring Toronto&apos;s food scene (I&apos;m always down for good ramen), reading about global development policy, or planning my next travel adventure. I&apos;m also that person who gets genuinely excited about sustainable energy grids and zero-knowledge proofs - yeah, I know how that sounds!
+                      On a personal level, I love spending time with my friends in a variety of different scenarios, whether it's a night out in
+                      Durham or Toronto or a casual poker night in. As I've gotten older, I've also developed a keen interest in politics, inspiring
+                      me to pick up a minor in Political Science at school.
                     </p>
 
                     <p>
-                      What drives me isn&apos;t just the tech itself, but the people and communities behind it. I&apos;ve learned that the most meaningful work happens when you&apos;re building alongside others who share your values. Whether that&apos;s collaborating with fellow developers, mentoring younger students, or just having deep conversations with friends over coffee - those relationships are what keep me grounded and inspired.
+                      What drives me isn&apos;t just the technology for the sake of technology, but the people and communities I am working with. I&apos;ve 
+                      learned that the most meaningful work happens when you&apos;re working alongside others who share your values, not just academic or career 
+                      interests. 
                     </p>
 
                     <p>
-                      I&apos;m still figuring a lot of things out (aren&apos;t we all?), but I know I want to spend my time building things that matter, learning from incredible people, and hopefully making a small dent in solving problems that affect real communities. If you&apos;re working on something interesting or just want to chat about ideas, I&apos;d love to hear from you.
+                      I&apos;m still figuring a lot of things out about myself and the world, but I know I enjoy working in startup environments due to their pace, 
+                      requirement for agency, and initmate team settings. Through startups I hope to build things that matter,
+                       learn from incredible people, and hopefully make a small dent in solving problems that affect real communities.
                     </p>
                   </div>
                 </div>
@@ -82,14 +96,14 @@ export default function AboutPage() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
-                What I Value
+                My values
               </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <Card>
                   <CardContent className="p-6 text-center">
                     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <span className="text-primary text-2xl">🤝</span>
+                      <span className="text-primary text-2xl">❤️</span>
                     </div>
                     <h3 className="font-semibold text-foreground mb-2">Close Relationships</h3>
                     <p className="text-sm text-muted-foreground">
@@ -101,11 +115,11 @@ export default function AboutPage() {
                 <Card>
                   <CardContent className="p-6 text-center">
                     <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <span className="text-secondary text-2xl">🌱</span>
+                      <span className="text-secondary text-2xl">📈</span>
                     </div>
-                    <h3 className="font-semibold text-foreground mb-2">Personal Growth</h3>
+                    <h3 className="font-semibold text-foreground mb-2">Always push myself</h3>
                     <p className="text-sm text-muted-foreground">
-                      Constantly learning, pushing boundaries, and embracing new challenges
+                      Always be learning and pushing my boundaries physically, intellectually, and emotionally
                     </p>
                   </CardContent>
                 </Card>
@@ -115,9 +129,9 @@ export default function AboutPage() {
                     <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                       <span className="text-accent text-2xl">🌍</span>
                     </div>
-                    <h3 className="font-semibold text-foreground mb-2">Community Impact</h3>
+                    <h3 className="font-semibold text-foreground mb-2">Be mission driven</h3>
                     <p className="text-sm text-muted-foreground">
-                      Using technology to advance communities and reduce global inequity
+                      Have a long term outlook on what I am working on to ensure there is a positive mission associated
                     </p>
                   </CardContent>
                 </Card>
@@ -125,51 +139,6 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
-
-        {/* Current Focus */}
-        <section className="py-16 bg-muted/30">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
-                Currently Working On
-              </h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <Card>
-                  <CardContent className="p-6">
-                    <h3 className="font-semibold text-foreground mb-3">🎓 Learning & Growing</h3>
-                    <p className="text-muted-foreground mb-4">
-                      Diving deep into machine learning and AI development while exploring the intersection of technology and social impact.
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {siteConfig.personal.expertise.map((skill) => (
-                        <Badge key={skill} variant="outline" className="text-xs">
-                          {skill}
-                        </Badge>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card>
-                  <CardContent className="p-6">
-                    <h3 className="font-semibold text-foreground mb-3">🚀 Building Projects</h3>
-                    <p className="text-muted-foreground mb-4">
-                      Working on climate tech solutions, Web3 applications, and ML models that address real-world problems.
-                    </p>
-                    <Button asChild variant="outline" size="sm">
-                      <Link href="/projects">View My Work</Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-              </div>
-
-              
-            </div>
-          </div>
-        </section>
-
-        
       </main>
       <Footer />
     </div>

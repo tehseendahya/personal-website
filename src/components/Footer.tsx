@@ -24,8 +24,8 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-lg font-semibold text-foreground mb-4">Tehseen Dahya</h3>
             <p className="text-muted-foreground mb-4">
-              Developer, innovator, and changemaker working on technology solutions to reduce global inequity. 
-              Currently a student from Toronto with expertise in ML, Web3, and climate tech.
+              Student at Duke University studying Electrical and Computer Engineering. Interested in working on 
+              technology solutions to reduce global inequity.
             </p>
             <div className="flex space-x-4">
               <Link
