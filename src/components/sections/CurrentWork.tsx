@@ -2,13 +2,13 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "../ui/badge";
-import { siteConfig } from "@/content/config";
+import { siteConfig, Project } from "@/content/config";
 import { CardContent } from "../ui/card";
 import { Card } from "../ui/card";
 
 const CurrentWork = () => {
   // Get active projects from config
-  const activeProjects = siteConfig.projects.filter(project => (project as any).active);
+  const activeProjects = siteConfig.projects.filter(project => (project as Project).active);
 
   return (
     <section className="py-12 bg-muted/30">
@@ -31,16 +31,16 @@ const CurrentWork = () => {
                   </p>
                   
                   {/* Impact Section */}
-                  {(project as any).impact && (
+                  {(project as Project).impact && (
                     <div className="mb-4 p-3 bg-secondary/5 rounded-lg">
                       <p className="text-sm font-medium text-secondary">
-                        🎯 {(project as any).impact}
+                        🎯 {(project as Project).impact}
                       </p>
                     </div>
                   )}
                   
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {project.technologies.slice(0, 4).map((tech) => (
+                    {project.technologies?.slice(0, 4).map((tech) => (
                       <Badge key={tech} variant="outline" className="text-xs">
                         {tech}
                       </Badge>
@@ -48,7 +48,7 @@ const CurrentWork = () => {
                   </div>
                   
                   <div className="flex justify-between items-center">
-                    {(project as any).comingSoon ? (
+                    {(project as Project).comingSoon ? (
                       <Button variant="outline" size="sm" disabled>
                         More Info Coming Soon
                       </Button>
@@ -58,18 +58,18 @@ const CurrentWork = () => {
                       </Button>
                     )}
                     
-                    {!(project as any).comingSoon && (
+                    {!(project as Project).comingSoon && (
                       <div className="flex space-x-2">
-                        {(project as any).githubUrl && (
+                        {(project as Project).githubUrl && (
                           <Button asChild variant="outline" size="sm">
-                            <Link href={(project as any).githubUrl} target="_blank" rel="noopener noreferrer">
+                            <Link href={(project as Project).githubUrl!} target="_blank" rel="noopener noreferrer">
                               GitHub
                             </Link>
                           </Button>
                         )}
-                        {(project as any).demoUrl && (
+                        {(project as Project).demoUrl && (
                           <Button asChild variant="outline" size="sm">
-                            <Link href={(project as any).demoUrl} target="_blank" rel="noopener noreferrer">
+                            <Link href={(project as Project).demoUrl!} target="_blank" rel="noopener noreferrer">
                               Demo
                             </Link>
                           </Button>

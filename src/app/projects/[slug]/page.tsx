@@ -64,7 +64,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 <Badge className={categoryColors[project.category as keyof typeof categoryColors]}>
                   {categoryLabels[project.category as keyof typeof categoryLabels]}
                 </Badge>
-                {(project as any).active && (
+                {(project as { active?: boolean }).active && (
                   <Badge variant="default" className="bg-green-500 hover:bg-green-600">
                     Currently Working On
                   </Badge>

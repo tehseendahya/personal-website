@@ -2,9 +2,6 @@ import { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/content/config";
 
@@ -68,8 +65,8 @@ export default function AboutPage() {
                     </p>
 
                     <p>
-                      On a personal level, I love spending time with my friends in a variety of different scenarios, whether it's a night out in
-                      Durham or Toronto or a casual poker night in. As I've gotten older, I've also developed a keen interest in politics, inspiring
+                      On a personal level, I love spending time with my friends in a variety of different scenarios, whether it&apos;s a night out in
+                      Durham or Toronto or a casual poker night in. As I&apos;ve gotten older, I&apos;ve also developed a keen interest in politics, inspiring
                       me to pick up a minor in Political Science at school.
                     </p>
 

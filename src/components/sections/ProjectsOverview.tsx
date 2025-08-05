@@ -4,7 +4,8 @@ import ProjectCard from "@/components/ProjectCard";
 import { siteConfig } from "@/content/config";
 
 const ProjectsOverview = () => {
-  const featuredProjects = siteConfig.featuredProjects;
+  // Get first 3 projects as featured projects
+  const featuredProjects = siteConfig.projects.slice(0, 3);
   const categories = siteConfig.projectCategories.map(category => ({
     ...category,
     count: siteConfig.projects.filter(p => p.category === category.href.split('/').pop()).length
