@@ -37,10 +37,10 @@ export const siteConfig = {
     // Personal Projects
     {
       title: "AI Agents for Healthcare",
-      description: "Developing AI agents that assist healthcare professionals in the autism space with scheduling, insurance verification, customer support, and recruiting.",
+      description: "Developing agents to assist healthcare providers in the autism space with scheduling, insurance verification, customer support, and recruiting.",
       category: "contracting" as const,
       technologies: ["Python", "LLM Orchestration", "RAG", "Healthcare", "Machine Learning"],
-      impact: "Currently in development - aiming to reduce healthcare provider workload and improve patient care", 
+      impact: "Currently in development", 
       slug: "ai-agents-healthcare",
       active: true,
       comingSoon: true,
