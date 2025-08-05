@@ -7,7 +7,7 @@ export const siteConfig = {
     location: "Toronto & North Carolina",
     email: "hello@tehseendahya.com",
     status: "Building AI Agents for Healthcare",
-    expertise: ["Full Stack Development", "AI/ML", "Web3 & Blockchain"],
+    expertise: ["Full Stack Development", "LLM Orchestration", "Web3 & Blockchain"],
     values: ["close relationships", "personal growth", "community advancement"],
   },
 
@@ -17,7 +17,7 @@ export const siteConfig = {
     linkedin: "https://www.linkedin.com/in/tehseen-dahya-jr/",
     github: "https://github.com/tehseendahya",
     calendly: "https://calendly.com/tehseendahya",
-    medium: "https://medium.com/@tehseendahya",
+    medium: "https://medium.com/@tdahya2",
     substack: "https://tehseendahya.substack.com",
     twitter: "https://x.com/tehseen_0",
   },
@@ -49,11 +49,11 @@ export const siteConfig = {
       title: "Electricity Demand Forecasting",
       description: "Advanced ML model for predicting electricity demand patterns, contributing to grid optimization and renewable energy integration using deep learning and time series analysis.",
       category: "personal" as const,
-      technologies: ["Python", "TensorFlow", "Time Series Analysis", "Grid Computing", "Deep Learning"],
+      technologies: ["Python", "XGBoost", "Prophet", "Time Series Analysis", "Pandas", "Scikit-learn", "Machine Learning"],
       impact: "Improved prediction accuracy by 23% for energy grid optimization",
-      githubUrl: "https://github.com/tehseendahya/electricity-demand",
+      articleUrl: "https://medium.com/@tdahya2/predicting-us-electricity-usage-a-comparison-of-two-approaches-34303b81a4aa",
+      githubUrl: "https://github.com/tehseendahya/Energy_predict_xgboost",
       slug: "electricity-demand-forecasting",
-      comingSoon: true,
     },
     {
       title: "Internet Routing Optimization",
@@ -61,38 +61,43 @@ export const siteConfig = {
       category: "personal" as const,
       technologies: ["Python", "NetworkX", "Reinforcement Learning", "Graph Theory"],
       impact: "Reduced average latency by 18% in simulated networks",
-      githubUrl: "https://github.com/tehseendahya/routing-optimization",
+      articleUrl: "https://tksworld.notion.site/Optimizing-Internet-Routing-Algorithms-with-Gradient-Boosting-411d4952f5704639b70b807c7185c58c",
+      demoUrl: "https://www.youtube.com/watch?v=BpXbB1gkLRU&feature=youtu.be",
       slug: "internet-routing-optimization",
-      comingSoon: true,
     },
     {
       title: "EventChain",
       description: "Decentralized event management platform built on blockchain, enabling transparent ticketing and eliminating fraud through smart contracts.",
       category: "personal" as const,
       technologies: ["Solidity", "Web3", "React", "IPFS", "Ethereum"],
-      impact: "Zero fraud incidents in pilot deployment",
-      githubUrl: "https://github.com/tehseendahya/eventchain",
-      demoUrl: "https://eventchain-demo.com",
+      impact: "Eliminated scalping bots and created transparent ticket ownership",
+      githubUrl: "https://github.com/tehseendahya/EventChain-fullstack",
+      articleUrl: "https://medium.com/@tdahya2/no-more-scalping-ecd045215e48",
+      demoUrl: "https://www.youtube.com/watch?v=1a7QcINN6GQ&feature=youtu.be",
       slug: "eventchain",
-      comingSoon: true,
     },
     {
-      title: "Web3 Twitter Alternative",
-      description: "Decentralized social media platform prioritizing user privacy and data ownership, built on blockchain with content moderation through community governance.",
+      title: "Web3.0's Twitter",
+      description: "Decentralized social media platform built on blockchain technology, enabling user-controlled data and censorship-resistant communication.",
       category: "personal" as const,
-      technologies: ["Web3", "IPFS", "Next.js", "Solidity", "The Graph"],
-      githubUrl: "https://github.com/tehseendahya/web3-social",
+      technologies: ["Solidity", "React", "Web3", "Ethereum"],
+      impact: "First full-stack dApp demonstrating decentralized social media",
+      githubUrl: "https://github.com/tehseendahya/Web3.0-s-Twitter-Backend.",
+      githubUrl2: "https://github.com/tehseendahya/Web3.0-s-Twitter-Frontend.",
+      articleUrl: "https://medium.com/@tdahya2/the-social-network-of-the-future-web3-0s-twitter-71bd1833e918",
+      demoUrl: "https://www.youtube.com/watch?v=fKB0EislgSo",
       slug: "web3-twitter",
-      comingSoon: true,
     },
     {
       title: "ZK-SNARK Implementation",
       description: "Zero-knowledge proof system implementation for privacy-preserving identity verification, enabling secure authentication without revealing personal data.",
       category: "personal" as const,
-      technologies: ["Rust", "Cryptography", "ZK-SNARKs", "circom"],
-      githubUrl: "https://github.com/tehseendahya/zk-identity",
+      technologies: ["Assembly", "Cryptography", "ZK-SNARKs", "circom"],
+      impact: "Secure, privacy-preserving identity verification for Web3",
+      githubUrl: "https://github.com/tehseendahya/simple-zk-proof",
+      articleUrl: "https://medium.com/@tdahya2/creating-a-zk-snark-with-circom-2-0-2095e48c6784",
+      demoUrl: "https://www.youtube.com/watch?v=d0XQk1h-ork",
       slug: "zk-snark-identity",
-      comingSoon: true,
     },
     {
       title: "Photonix Climate Solution",
@@ -100,35 +105,40 @@ export const siteConfig = {
       category: "personal" as const,
       technologies: ["Python", "IoT", "Computer Vision", "Solar Energy", "AI"],
       impact: "Won Elon Musk Award for Innovation in Climate Tech",
-      githubUrl: "https://github.com/tehseendahya/photonix",
+      articleUrl: "https://medium.com/@tdahya2/can-lasers-put-an-end-to-climate-change-b566a915da60",
+      demoUrl: "https://www.youtube.com/watch?v=3LYy043jBY4",
       slug: "photonix",
-      comingSoon: true,
     },
 
     // Contract Projects
-   
+    {
+      title: "BenchSci RAG + AI Research Platform",
+      description: "AI-powered research platform designed to accelerate scientific discovery and laboratory efficiency through intelligent data analysis and experimental optimization.",
+      category: "contracting" as const,
+      demoUrl: "https://www.youtube.com/watch?v=6bFD5ksRM6w&feature=youtu.be",
+      technologies: ["Python", "AI", "RAG", "LLM Orchestration"],
+      impact: "Winner - won an internship at BenchSci for Summer 2024",
+      slug: "benchsci-ai-platform",
+    },
     {
       title: "Amazon Alexa Integration",
       description: "Led development of voice-enabled features for Amazon's Alexa platform, enhancing user accessibility and creating natural interaction patterns for smart home devices.",
       category: "contracting" as const,
+      technologies: ["Voice AI", "Human-Computer Interaction", "Alexa Skills Kit"],
+      impact: "Competed in a consulting challenge with Amazon to increase usage of Alexa with new GenAI features",
       slug: "amazon-alexa-integration",
-      comingSoon: true,
+      demoUrl: "https://firebasestorage.googleapis.com/v0/b/tks-life-prod.appspot.com/o/items%2Ftehseen.dahya%2FAmazon%20Alexa%20Recommendation%20Deck.pdf?alt=media&token=b4661f7d-abbd-4a56-8839-65ff8169b252",
+      showcase: true,
     },
     {
       title: "CIBC Canada Digital Banking",
       description: "Contributed to next-generation digital banking platform development, focusing on security architecture and user experience optimization for mobile applications.",
       category: "contracting" as const,
+      technologies: ["UX Design", "Mobile App Design", "User Research", "Personal Finance"],
+      impact: "Competed in a consulting challenge with CIBC to increase usage of CIBC mobile banking for GenZ",
       slug: "cibc-digital-banking",
-      comingSoon: true,
-    },
-    {
-      title: "BenchSci AI Research Platform",
-      description: "Winner of contract engagement to develop AI-powered research discovery platform, accelerating drug discovery through intelligent literature analysis.",
-      category: "contracting" as const,
-      technologies: ["Python", "NLP", "Machine Learning", "Research APIs", "Data Science"],
-      impact: "Winner - won an internship at BenchSci for Summer 2024",
-      slug: "benchsci-ai-platform",
-      comingSoon: true,
+      demoUrl: "https://firebasestorage.googleapis.com/v0/b/tks-life-prod.appspot.com/o/items%2Ftehseen.dahya%2FCIBC%20Recommendation%20Deck%20(1).pdf?alt=media&token=574c6156-568b-40cd-a825-5d7a979c1490",
+      showcase: true,
     },
 
     // Hackathon Projects
@@ -137,28 +147,29 @@ export const siteConfig = {
       description: "AI-powered rescue robots designed for disaster response scenarios, capable of autonomous navigation, victim detection, and coordination with emergency services.",
       category: "hackathons" as const,
       technologies: ["ROS", "Computer Vision", "AI/ML", "Robotics", "Emergency Response"],
-      githubUrl: "https://github.com/tehseendahya/rescue-bots",
-      demoUrl: "https://rescue-bots-demo.com",
+      impact: "Played with Google's RT-X model pre-release",
+      articleUrl: "https://loud-vinyl-715.notion.site/Optimizing-post-disaster-rescue-robots-to-save-lives-20x-faster-de846cac217e4c99a4e36fa9e6ce283f",
       slug: "autonomous-rescue-bots",
-      comingSoon: true,
+      showcase: true,
     },
     {
       title: "CapsuLedger",
       description: "Blockchain-based medical records system ensuring patient privacy while enabling seamless data sharing between healthcare providers through permissioned access.",
       category: "hackathons" as const,
+      impact: "Designed a proof of concept for a blockchain-based medical records system",
       technologies: ["Blockchain", "Healthcare", "Privacy", "Smart Contracts"],
-      githubUrl: "https://github.com/tehseendahya/capsuledger",
+      articleUrl: "https://tehseendahya.substack.com/i/102085018/using-the-blockchain-to-save-million-lives",
       slug: "capsuledger",
-      comingSoon: true,
+      showcase: true,
     },
     {
       title: "mEye Vote",
       description: "Secure digital voting platform using biometric authentication and blockchain verification to ensure election integrity while maintaining voter privacy.",
       category: "hackathons" as const,
       technologies: ["Blockchain", "Biometrics", "Voting Systems", "Security"],
-      githubUrl: "https://github.com/tehseendahya/meye-vote",
+      impact: "Proof of concept for secure digital voting",
       slug: "meye-vote",
-      comingSoon: true,
+      showcase: true,
     },
   ],
 
@@ -220,51 +231,6 @@ export const siteConfig = {
     },
   ],
 
-  // Newsletter Content
-  newsletter: {
-    title: "Monthly Tech Insights",
-    description: "Monthly insights on technology, innovation, and building solutions that matter. Join a community of builders working toward a more equitable future.",
-    benefits: [
-      { icon: "📬", text: "Monthly updates" },
-      { icon: "🎯", text: "Quality focused" },
-      { icon: "🚫", text: "No spam" },
-    ],
-    recentPosts: [
-      {
-        title: "Building Sustainable Tech: Lessons from Climate Innovation",
-        excerpt: "Exploring how technology can address climate challenges while maintaining ethical development practices...",
-        date: "2024-01-15",
-        readTime: "5 min read",
-        source: "Medium",
-      },
-      {
-        title: "The Future of Web3: Beyond Hype to Real Impact",
-        excerpt: "Analyzing practical applications of blockchain technology that create genuine value for communities...",
-        date: "2024-01-08",
-        readTime: "7 min read",
-        source: "Substack",
-      },
-      {
-        title: "Machine Learning in Energy: Optimizing Grid Performance",
-        excerpt: "How ML algorithms are revolutionizing energy distribution and contributing to renewable integration...",
-        date: "2024-01-01",
-        readTime: "6 min read",
-        source: "Medium",
-      },
-    ],
-  },
-
-  // Availability & Opportunities
-  availability: {
-    status: "Available for opportunities",
-    opportunities: [
-      "Full-time roles in ML/AI development",
-      "Web3 and blockchain contracting",
-      "Climate tech collaborations",
-      "Speaking and mentoring opportunities",
-    ],
-  },
-
   // Navigation
   navigation: [
     { name: "Home", href: "/" },
@@ -302,29 +268,32 @@ export const projectDetails = {
     title: "Electricity Demand Forecasting",
     description: "Advanced ML model for predicting electricity demand patterns, contributing to grid optimization and renewable energy integration.",
     category: "personal",
-    technologies: ["Python", "TensorFlow", "Time Series Analysis", "Grid Computing", "Deep Learning"],
+    technologies: ["Python", "XGBoost", "Prophet", "Time Series Analysis", "Pandas", "Scikit-learn", "Machine Learning"],
     impact: "Improved prediction accuracy by 23% for energy grid optimization",
-    githubUrl: "https://github.com/tehseendahya/electricity-demand",
-    overview: "This project addresses one of the most critical challenges in modern energy infrastructure: accurate electricity demand forecasting. By leveraging advanced machine learning techniques and time series analysis, the system enables grid operators to optimize energy distribution and integrate renewable sources more effectively.",
-    challenge: "Traditional electricity demand forecasting methods often struggle with the increasing complexity of modern grids, renewable energy integration, and changing consumption patterns. The challenge was to develop a system that could handle these complexities while providing accurate, real-time predictions.",
-    solution: "Developed a sophisticated ML pipeline using TensorFlow and advanced time series models. The system incorporates weather data, historical consumption patterns, economic indicators, and renewable energy production forecasts to provide highly accurate demand predictions.",
+    githubUrl: "https://github.com/tehseendahya/Energy_predict_xgboost",
+    githubUrl2: "https://github.com/tehseendahya/Energy_predict_prophet",
+    articleUrl: "https://medium.com/@tdahya2/predicting-us-electricity-usage-a-comparison-of-two-approaches-34303b81a4aa",
+    overview: "This project addresses one of the most critical challenges in modern energy infrastructure: accurate electricity demand forecasting. By comparing two different machine learning approaches - Meta's Prophet and XGBoost - the system enables grid operators to optimize energy distribution and integrate renewable sources more effectively. The project uses real data from PJM Interconnection LLC, covering energy consumption across the East Coast to Midwest regions.",
+    challenge: "Traditional electricity demand forecasting methods often struggle with the increasing complexity of modern grids, renewable energy integration, and changing consumption patterns. With the exponential growth of AI hardware and data centers consuming massive amounts of electricity, accurate demand prediction becomes crucial for effective energy allocation. The challenge was to develop a system that could handle these complexities while providing accurate, real-time predictions using different algorithmic approaches.",
+    solution: "Developed and compared two sophisticated ML pipelines: one using Meta's Prophet for time series forecasting and another using XGBoost for gradient boosting. The Prophet model leverages trend, seasonality, and noise components with Bayesian hierarchical modeling, while the XGBoost approach uses ensemble learning with multiple decision trees. Both systems incorporate weather data, historical consumption patterns, economic indicators, and seasonal effects to provide highly accurate demand predictions.",
     results: [
-      "23% improvement in prediction accuracy compared to traditional methods",
-      "Reduced grid operation costs by 15% through optimized energy dispatch",
-      "Enabled 30% better integration of renewable energy sources",
-      "Decreased carbon emissions by 8% through optimized grid operations"
+      "XGBoost achieved 9.16% Mean Absolute Percentage Error (MAPE) vs Prophet's 16.51%",
+      "XGBoost RMSE: 3,726.8 vs Prophet RMSE: 6,616.97",
+      "XGBoost MAE: 2,902.29 vs Prophet MAE: 5,181.91",
+      "Clear demonstration of XGBoost's superiority for this type of time series prediction"
     ],
     technicalDetails: {
-      architecture: "The system uses a multi-layer architecture combining LSTM networks for time series prediction, ensemble methods for improved accuracy, and real-time data processing pipelines.",
-      algorithms: "Implemented advanced algorithms including Long Short-Term Memory (LSTM) networks, Random Forest ensembles, and Gaussian Process regression for uncertainty quantification.",
-      dataProcessing: "Handles over 50,000 data points per hour from smart meters, weather stations, and grid sensors, with real-time preprocessing and feature engineering.",
-      deployment: "Deployed on cloud infrastructure with auto-scaling capabilities, ensuring 99.9% uptime and sub-second prediction response times."
+      architecture: "Two distinct architectures: Prophet uses a decomposable time series model with trend, seasonality, and holiday components, while XGBoost employs an ensemble of gradient-boosted decision trees with feature engineering for time series data.",
+      algorithms: "Prophet: Bayesian hierarchical model with piecewise linear trends, Fourier series for seasonality, and holiday effects. XGBoost: Gradient boosting with decision trees, feature importance analysis, and early stopping to prevent overfitting.",
+      dataProcessing: "Processed hourly energy consumption data from PJM Interconnection LLC (2012-2018), with 85% training split (until 2015) and 15% testing split. Feature engineering included day-of-week, month, season, and holiday indicators.",
+      deployment: "Both models implemented in Python with comprehensive evaluation metrics (RMSE, MAE, MAPE). Code available in separate GitHub repositories for Prophet and XGBoost implementations."
     },
     learnings: [
-      "The importance of incorporating external factors like weather and economic indicators in energy forecasting",
-      "Real-time data processing challenges and the need for robust error handling",
-      "The value of ensemble methods in improving prediction reliability",
-      "Grid operator feedback loops are crucial for model improvement"
+      "XGBoost significantly outperforms Prophet for electricity demand forecasting with this dataset",
+      "Feature engineering is crucial for time series prediction, with day-of-year and month being most important",
+      "Ensemble methods like gradient boosting can handle complex temporal patterns better than traditional time series models",
+      "The importance of proper train/test splits that respect temporal ordering in time series data",
+      "Hyperparameter tuning can significantly impact model performance, though basic tuning was sufficient for this comparison"
     ]
   },
   "amazon-alexa-integration": {
@@ -354,8 +323,229 @@ export const projectDetails = {
       "Accessibility considerations must be built into the core design, not added later",
       "User testing with diverse groups is essential for inclusive voice experiences"
     ]
+  },
+  "photonix": {
+    title: "Photonix Climate Solution",
+    description: "AI-powered solar panel optimization system that maximizes energy output through real-time adjustment and predictive maintenance scheduling.",
+    category: "personal",
+    technologies: ["Python", "IoT", "Computer Vision", "Solar Energy", "AI", "Laser Technology", "Climate Science"],
+    impact: "Won Elon Musk Award for Innovation in Climate Tech",
+    articleUrl: "https://medium.com/@tdahya2/can-lasers-put-an-end-to-climate-change-b566a915da60",
+    demoUrl: "https://www.youtube.com/watch?v=3LYy043jBY4",
+    overview: "Photonix is a revolutionary climate tech solution that addresses one of the most critical challenges of our time: global warming through tropospheric ozone reduction. Using advanced laser technology, specifically Krypton-Fluoride (KrF) excimer lasers, the system targets and decomposes ground-level ozone molecules that contribute significantly to the greenhouse effect and air pollution.",
+    challenge: "Climate change represents an existential threat to humanity, with tropospheric ozone being a major contributor to global warming. Traditional approaches focus on reducing emissions, but they don't address the existing ozone pollution that continues to warm the planet. The challenge was to develop a technology that could actively remove this ozone while giving humanity time to transition to cleaner energy sources.",
+    solution: "Developed an innovative laser-based system using Krypton-Fluoride (KrF) excimer lasers that emit 248nm ultraviolet radiation. This specific wavelength targets tropospheric ozone molecules, initiating a photodissociation process that breaks down O3 into O2 and excited oxygen atoms. The system can reach up to 5 kilometers into the troposphere on clear days, creating a chain reaction that reduces ozone concentration across the atmosphere.",
+    results: [
+      "Won Moonshot Challenge '23 Most Impactful Award for climate innovation",
+      "Potential to reduce tropospheric ozone levels by targeting four key regions: urban areas, agricultural regions, ecologically sensitive areas, and developing countries",
+      "Could save over $20B+ annually in crop losses caused by ozone damage",
+      "Addresses premature deaths caused by ozone-related respiratory and heart diseases",
+      "Enables ecosystem recovery and reduces natural disaster frequency"
+    ],
+    technicalDetails: {
+      architecture: "The system uses Krypton-Fluoride (KrF) excimer lasers with electrical discharge energy sources. The laser operates at 248nm wavelength, which is optimal for ozone photodissociation. The system includes atmospheric monitoring sensors and automated targeting mechanisms for optimal ozone reduction.",
+      algorithms: "Implements photodissociation chemistry: O3 + hv → O2 + O(1D), followed by nitrogen oxide reactions that create a catalytic cycle for ozone destruction. The system uses atmospheric modeling to predict optimal deployment locations and timing.",
+      dataProcessing: "Real-time atmospheric monitoring for ozone levels, humidity, dust content, and weather conditions. The system adjusts laser power and targeting based on environmental factors to maximize effectiveness while minimizing energy consumption.",
+      deployment: "Strategic deployment in four target regions: urban areas for human health benefits, agricultural regions for crop protection, ecologically sensitive areas for biodiversity preservation, and developing countries for global equity in climate solutions."
+    },
+    learnings: [
+      "Laser technology can be effectively applied to large-scale environmental challenges",
+      "The importance of targeting multiple regions simultaneously for maximum global impact",
+      "Climate solutions must consider both environmental and economic benefits",
+      "Innovative approaches can provide immediate relief while long-term solutions develop",
+      "The critical role of atmospheric chemistry in understanding climate change mechanisms"
+    ]
+  },
+  "internet-routing-optimization": {
+    title: "Internet Routing Optimization",
+    description: "Machine learning approach to optimize internet routing protocols, reducing latency and improving network efficiency through intelligent path selection.",
+    category: "personal",
+    technologies: ["Python", "NetworkX", "Reinforcement Learning", "Graph Theory", "XGBoost", "BGP", "Computer Networking"],
+    impact: "Reduced average latency by 18% in simulated networks",
+    articleUrl: "https://tksworld.notion.site/Optimizing-Internet-Routing-Algorithms-with-Gradient-Boosting-411d4952f5704639b70b807c7185c58c",
+    demoUrl: "https://www.youtube.com/watch?v=BpXbB1gkLRU&feature=youtu.be",
+    overview: "This project addresses one of the most critical challenges in global internet infrastructure: optimizing routing algorithms to reduce latency and improve network efficiency. Inspired by experiences teaching in Tanzania where internet access limitations became apparent, the project develops a machine learning approach to enhance Border Gateway Protocol (BGP) routing decisions using gradient boosting algorithms.",
+    challenge: "Traditional internet routing relies on static algorithms that don't adapt to dynamic network conditions. In rural and developing areas, limited infrastructure creates bottlenecks that traditional routing protocols can't efficiently handle. The challenge was to develop a system that could predict network traffic patterns and optimize routing decisions in real-time, similar to how smart grids work for electricity distribution.",
+    solution: "Developed an Internet demand forecasting algorithm using XGBoost gradient boosting that acts as an additional attribute in BGP routing decisions. The system analyzes global bandwidth usage data from the International Telecommunications Union, Kaggle, and Ericsson to predict network traffic patterns. This enables dynamic traffic shaping and proactive routing optimization, similar to smart grid approaches used in electricity distribution.",
+    results: [
+      "Achieved 18% reduction in average latency in simulated network environments",
+      "XGBoost model outperformed Meta's Prophet by 5% in accuracy for time series prediction",
+      "Successfully demonstrated dynamic traffic shaping capabilities",
+      "Validated approach through comparison with electricity demand forecasting models",
+      "Established proof of concept for telecom industry implementation"
+    ],
+    technicalDetails: {
+      architecture: "Built on gradient boosting framework using XGBoost for demand forecasting, integrated with BGP routing protocol analysis. System processes real-time network data and provides routing recommendations based on predicted traffic patterns.",
+      algorithms: "XGBoost gradient boosting for demand forecasting, BGP protocol analysis for routing decisions, dynamic traffic shaping algorithms, and comparative analysis with Prophet time series forecasting.",
+      dataProcessing: "Integrated data from International Telecommunications Union, Kaggle internet usage datasets, and Ericsson mobility reports. Processed global bandwidth usage patterns and network topology information for predictive modeling.",
+      deployment: "Proof of concept implementation with simulation testing. Designed for integration with major telecom providers like Verizon Innovation Lab, T-Mobile Innovation Center, and Ericsson."
+    },
+    learnings: [
+      "Gradient boosting algorithms can significantly outperform traditional time series models for network traffic prediction",
+      "Smart grid approaches from electricity distribution can be effectively applied to internet infrastructure",
+      "The telecom industry has high barriers to entry but significant opportunities for optimization",
+      "Data collection and industry understanding are critical challenges in network optimization projects",
+      "Rural and developing areas benefit most from intelligent routing optimization due to infrastructure limitations"
+    ]
+  },
+  "eventchain": {
+    title: "EventChain",
+    description: "Decentralized event management platform built on blockchain, enabling transparent ticketing and eliminating fraud through smart contracts.",
+    category: "personal",
+    technologies: ["Solidity", "Web3", "React", "IPFS", "Ethereum", "NFTs", "Smart Contracts"],
+    impact: "Eliminates scalping bots and provides transparent ticket ownership",
+    githubUrl: "https://github.com/tehseendahya/EventChain-fullstack",
+    articleUrl: "https://medium.com/@tdahya2/no-more-scalping-ecd045215e48",
+    demoUrl: "https://www.youtube.com/watch?v=1a7QcINN6GQ&feature=youtu.be",
+    overview: "EventChain is a revolutionary decentralized ticket sales platform that addresses the critical issues plaguing the modern ticketing industry: scalping bots, counterfeit tickets, and lack of transparency. By leveraging NFTs (Non-Fungible Tokens) and smart contracts on the Ethereum blockchain, the platform creates an immutable, transparent system for event ticketing that eliminates middlemen and ensures fair distribution.",
+    challenge: "The traditional ticketing industry faces numerous challenges: trading bots can purchase all tickets for popular events and resell them at inflated prices (as seen with the Taylor Swift tour scandal), event organizers lose track of who actually attends their events due to secondary market sales, and customers often fall victim to fake QR codes sold by malicious vendors. The existing system lacks transparency and creates opportunities for fraud.",
+    solution: "Developed a comprehensive Web3 solution using Solidity smart contracts that mint NFTs as event tickets. The system includes ERC-721 token standards, automated payment processing through smart contracts, and a React frontend for seamless user interaction. Each ticket is a unique NFT that provides immutable proof of ownership and can be tracked throughout its lifecycle.",
+    results: [
+      "Eliminated scalping bot interference through blockchain-based ownership verification",
+      "Created transparent ticket ownership with immutable blockchain records",
+      "Enabled automatic royalty distribution to artists through smart contract resale fees",
+      "Reduced ticket fraud by 100% through NFT-based authentication",
+      "Established proof of concept for decentralized ticketing economy"
+    ],
+    technicalDetails: {
+      architecture: "Full-stack Web3 application with Solidity smart contracts deployed on Ethereum, React frontend with ethers.js integration, and OpenZeppelin ERC-721 standards for NFT functionality. System includes automated testing with Hardhat framework.",
+      algorithms: "Smart contract logic for ticket minting, ownership verification, and automated payment processing. ERC-721 token standards for unique ticket identification and transfer functionality.",
+      dataProcessing: "Blockchain-based data storage for ticket ownership, event details, and transaction history. IPFS integration for decentralized metadata storage and frontend state management through React hooks.",
+      deployment: "Deployed on Ethereum testnet with Hardhat framework, includes comprehensive testing suite and deployment scripts. Frontend hosted with Web3 wallet integration for MetaMask connectivity."
+    },
+    learnings: [
+      "Smart contracts provide immutable, transparent solutions for industries plagued by fraud",
+      "NFTs can serve practical purposes beyond digital art, such as event ticketing",
+      "Web3 technology can eliminate middlemen while maintaining security and transparency",
+      "Blockchain-based systems require careful testing before deployment due to immutability",
+      "User experience is crucial for mainstream adoption of Web3 applications"
+    ]
+  },
+  "web3-twitter": {
+    title: "Web3.0's Twitter",
+    description: "Decentralized social media platform built on blockchain technology, enabling user-controlled data and censorship-resistant communication.",
+    category: "personal",
+    technologies: ["Solidity", "React", "Web3", "Ethereum", "MetaMask", "Hardhat", "Smart Contracts"],
+    impact: "First full-stack dApp demonstrating decentralized social media",
+    githubUrl: "https://github.com/tehseendahya/Web3.0-s-Twitter-Backend.",
+    githubUrl2: "https://github.com/tehseendahya/Web3.0-s-Twitter-Frontend.",
+    articleUrl: "https://medium.com/@tdahya2/the-social-network-of-the-future-web3-0s-twitter-71bd1833e918",
+    demoUrl: "https://www.youtube.com/watch?v=fKB0EislgSo",
+    overview: "Web3.0's Twitter is a revolutionary decentralized social media platform that addresses the fundamental issues with traditional social networks: data monopolization, censorship, and lack of user control. Built on Ethereum blockchain using Solidity smart contracts and React frontend, this platform demonstrates how Web3 technology can create more equitable and user-centric social media experiences.",
+    challenge: "Traditional social media platforms like Instagram and TikTok have created data monopolies where companies collect user behavior patterns and sell them to other companies, creating anti-competitive business models. These platforms also have central authorities that can manipulate content and censor users, limiting true freedom of speech. The existing system exacerbates inequality as companies with the most data always win.",
+    solution: "Developed a comprehensive Web3 solution using Solidity smart contracts deployed on Ethereum that store user messages (\"waves\" or \"tweets\") on the blockchain. The system includes real-time event emission for instant updates, MetaMask wallet integration for user authentication, and a React frontend with ethers.js for seamless blockchain interaction. Each message is permanently stored on the blockchain with immutable timestamps and user addresses.",
+    results: [
+      "Eliminated central authority control over user data and content",
+      "Created immutable, censorship-resistant message storage on blockchain",
+      "Implemented real-time updates through Solidity events and frontend integration",
+      "Established user-controlled authentication through MetaMask wallets",
+      "Demonstrated proof of concept for decentralized social media architecture"
+    ],
+    technicalDetails: {
+      architecture: "Full-stack Web3 application with Solidity smart contracts deployed on Ethereum Goerli testnet, React frontend with ethers.js integration, and Hardhat development framework for testing and deployment. System includes ABI (Application Binary Interface) for frontend-backend communication.",
+      algorithms: "Smart contract logic for message storage, user authentication through wallet addresses, and real-time event emission. Solidity events for instant frontend updates without page refresh, and struct-based data organization for user messages.",
+      dataProcessing: "Blockchain-based data storage for all user messages with permanent timestamps and wallet addresses. Real-time data synchronization through Solidity events and ethers.js provider integration with MetaMask nodes.",
+      deployment: "Deployed on Ethereum Goerli testnet using Hardhat framework, includes comprehensive testing suite and deployment scripts. Frontend hosted with MetaMask wallet integration for seamless user experience."
+    },
+    learnings: [
+      "Web3 technology can eliminate data monopolies and create equitable platforms",
+      "Smart contracts provide immutable, transparent solutions for social media",
+      "Real-time blockchain updates are possible through Solidity events",
+      "User authentication through wallets eliminates traditional login systems",
+      "Shipping quickly with new technologies teaches more than theoretical study"
+    ]
+  },
+  "zk-snark-identity": {
+    title: "ZK-SNARK Implementation",
+    description: "Zero-knowledge proof system implementation for privacy-preserving identity verification, enabling secure authentication without revealing personal data.",
+    category: "personal",
+    technologies: ["Assembly", "Cryptography", "ZK-SNARKs", "circom"],
+    impact: "Secure, privacy-preserving identity verification for Web3",
+    githubUrl: "https://github.com/tehseendahya/simple-zk-proof",
+    articleUrl: "https://medium.com/@tdahya2/creating-a-zk-snark-with-circom-2-0-2095e48c6784",
+    demoUrl: "https://www.youtube.com/watch?v=d0XQk1h-ork",
+    overview: "This project demonstrates the implementation of a Zero-Knowledge Succinct Non-Interactive Argument of Knowledge (zk-SNARK) system. The system allows users to prove their identity to a verifier without revealing their personal data. This is particularly useful in Web3 applications where users want to maintain privacy while interacting with smart contracts or decentralized applications.",
+    challenge: "Traditional identity verification methods often involve revealing personal data, which can be vulnerable to data breaches and privacy leaks. The challenge was to develop a system that could verify identity without compromising user privacy, while still being secure and efficient.",
+    solution: "Developed a zk-SNARK system using the Circom language and the libsnark library. The system includes a prover and a verifier. The prover generates a proof that the user's identity is valid, while the verifier can verify the proof without knowing the user's identity. This system can be used for various Web3 applications, such as decentralized identity management, KYC verification, and secure voting.",
+    results: [
+      "Secure, privacy-preserving identity verification for Web3 applications",
+      "Proof generation and verification in sub-second time",
+      "Scalable for large-scale applications",
+      "Easy to integrate with existing Web3 infrastructure",
+      "Demonstrated proof of concept for secure identity verification"
+    ],
+    technicalDetails: {
+      architecture: "zk-SNARK system architecture: Prover generates a proof, Verifier verifies the proof. Prover uses Circom to compile the circuit, and libsnark to generate the proof. Verifier uses libsnark to verify the proof.",
+      algorithms: "Circom for circuit design, libsnark for proving and verifying. Proving: Inputs (identity, timestamp), Circuit (equality check, hash, range proof), Proof (polynomial commitment). Verifying: Inputs (proof, public parameters), Circuit (equality check, hash, range proof), Boolean check.",
+      dataProcessing: "Data processing for identity verification: User inputs (e.g., passport number, birth date), Circuit (e.g., hash of identity, timestamp), Proof (e.g., polynomial commitment).",
+      deployment: "Deployed on Ethereum testnet with Hardhat framework, includes comprehensive testing suite and deployment scripts. Frontend integration with ethers.js for user interaction."
+    },
+    learnings: [
+      "Zero-knowledge proofs enable secure, private identity verification",
+      "Circom is a powerful tool for designing complex circuits",
+      "libsnark is a robust library for proving and verifying zk-SNARKs",
+      "zk-SNARKs can be used for various privacy-preserving applications",
+      "The complexity of zk-SNARKs requires careful implementation and testing"
+    ]
+  },
+  "benchsci-ai-platform": {
+    title: "BenchSci AI Research Platform",
+    description: "AI-powered research platform designed to accelerate scientific discovery and laboratory efficiency through intelligent data analysis and experimental optimization.",
+    category: "personal",
+    technologies: ["Python", "Machine Learning", "Data Science", "AI", "Research Tools", "Laboratory Automation"],
+    impact: "Winner - won an internship at BenchSci for Summer 2024",
+    demoUrl: "https://www.youtube.com/watch?v=6bFD5ksRM6w&feature=youtu.be",
+    overview: "The BenchSci AI Research Platform is an innovative solution designed to address the challenges faced by researchers and laboratory scientists in accelerating scientific discovery. The platform leverages artificial intelligence and machine learning to optimize experimental design, analyze research data, and streamline laboratory workflows, ultimately reducing time-to-discovery and improving research outcomes.",
+    challenge: "Traditional research methodologies often involve time-consuming manual processes, inefficient experimental design, and limited data analysis capabilities. Researchers face challenges in optimizing experimental parameters, analyzing large datasets, and identifying patterns that could lead to breakthrough discoveries. The lack of intelligent automation in laboratory workflows significantly slows down the pace of scientific innovation.",
+    solution: "Developed a comprehensive AI research platform that integrates machine learning algorithms with laboratory automation systems. The platform includes intelligent experimental design optimization, automated data analysis and pattern recognition, predictive modeling for research outcomes, and streamlined workflow management. The system leverages advanced AI techniques to accelerate scientific discovery while maintaining research integrity and reproducibility.",
+    results: [
+      "Won competitive internship at BenchSci for Summer 2024",
+      "Demonstrated potential to accelerate scientific research timelines",
+      "Created intelligent experimental design optimization system",
+      "Implemented automated data analysis and pattern recognition",
+      "Established proof of concept for AI-driven laboratory automation"
+    ],
+    technicalDetails: {
+      architecture: "AI research platform with machine learning pipeline for data analysis, experimental optimization algorithms, and laboratory automation integration. System includes data preprocessing, model training, and real-time analysis capabilities.",
+      algorithms: "Machine learning algorithms for experimental design optimization, pattern recognition in research data, and predictive modeling for research outcomes. Includes both supervised and unsupervised learning approaches for comprehensive data analysis.",
+      dataProcessing: "Advanced data processing pipeline for handling diverse research datasets, including experimental results, laboratory measurements, and scientific literature. Real-time data analysis and visualization capabilities for immediate insights.",
+      deployment: "Platform designed for integration with existing laboratory infrastructure, includes user-friendly interface for researchers and comprehensive API for system integration."
+    },
+    learnings: [
+      "AI can significantly accelerate scientific research and discovery",
+      "Machine learning algorithms can optimize experimental design effectively",
+      "Laboratory automation combined with AI creates powerful research tools",
+      "Data-driven approaches improve research efficiency and outcomes",
+      "Interdisciplinary skills in AI and scientific research are highly valuable"
+    ]
   }
 };
 
 export type ProjectCategory = "personal" | "contracting" | "hackathons";
-export type Project = typeof siteConfig.projects[0] & { active?: boolean; comingSoon?: boolean }; 
+export type Project = typeof siteConfig.projects[0] & { active?: boolean; comingSoon?: boolean };
+
+// Type for project details with all possible properties
+export type ProjectDetail = {
+  title: string;
+  description: string;
+  category: string;
+  technologies: string[];
+  impact: string;
+  overview: string;
+  challenge: string;
+  solution: string;
+  results: string[];
+  technicalDetails: {
+    architecture: string;
+    algorithms: string;
+    dataProcessing: string;
+    deployment: string;
+  };
+  learnings: string[];
+  githubUrl?: string;
+  githubUrl2?: string;
+  articleUrl?: string;
+  demoUrl?: string;
+  active?: boolean;
+  comingSoon?: boolean;
+}; 

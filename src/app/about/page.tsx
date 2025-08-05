@@ -45,41 +45,33 @@ export default function AboutPage() {
                   </h1>
                   <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
                     <p>
-                      I&apos;m a student in Toronto who&apos;s genuinely passionate about using technology to tackle some of the world&apos;s 
-                      biggest challenges. While that might sound ambitious (and maybe a bit naive), I truly believe that thoughtful innovation 
-                      can help reduce global inequity and create opportunities for everyone.
+                      I&apos;m a 19-year-old from Toronto who&apos;s genuinely curious about how emerging technologies can reshape the world around us. 
+                      Although I&apos;m loving what we can do with AI and where it will take us, I love learning about all technologies and focusing not
+                      only on the technical details but also the broader implications these innovations have on society.
                     </p>
                     
                     <p>
-                      My interest in technology-for-good really crystallized during a teaching trip to Moshi, Tanzania. Working with local kids 
-                      and seeing firsthand how resource constraints affect education made me realize that the problems worth solving aren&apos;t 
-                      always the flashiest ones - they&apos;re the ones that can genuinely improve people&apos;s daily lives. That experience sparked 
-                      my focus on building solutions that are accessible and meaningful to real communities.
+                      My interest in mission-driventechnology crystallized during an eight week stay in Moshi, Tanzania when I was 16. Working with local kids 
+                      and seeing firsthand how resource and mindset constraints affect education made me realize that the most meaningful problems 
+                      require hands on understanding and experience, rather than classroom or code-based theoretical solutions.
                     </p>
 
                     <p>
-                      Most of my time is spent working on projects that relate some degree of emerging technology with a political or soci-economic 
-                      implication, allowing me to apply both my left and right brain to solve the problem . I&apos;ve been fortunate to work with 
-                      some incredible companies as an intern or contractor, but some of my favorite projects have been the late-night builds 
-                      and personal experiments that started as &quot;what if we could...&quot; conversations with friends.
+                      Most of my time is spent working on projects that combine emerging technology with some sort of political or social-economic implication. 
+                      I&apos;ve been fortunate to work with some incredible companies as an intern or contractor, but some of my favorite 
+                      projects have been the late-night builds and personal experiments that started as &quot;what if we could...&quot; conversations with friends.
                     </p>
 
                     <p>
-                      On a personal level, I love spending time with my friends in a variety of different scenarios, whether it&apos;s a night out in
-                      Durham or Toronto or a casual poker night in. As I&apos;ve gotten older, I&apos;ve also developed a keen interest in politics, inspiring
+                      On a personal level, I love spending time with friends in a variety of scenarios, whether it&apos;s a night out in
+                      Durham or Toronto or a casual poker night. I&apos;ve also developed a keen interest in politics, which inspired
                       me to pick up a minor in Political Science at school.
                     </p>
 
                     <p>
-                      What drives me isn&apos;t just the technology for the sake of technology, but the people and communities I am working with. I&apos;ve 
-                      learned that the most meaningful work happens when you&apos;re working alongside others who share your values, not just academic or career 
-                      interests. 
-                    </p>
-
-                    <p>
-                      I&apos;m still figuring a lot of things out about myself and the world, but I know I enjoy working in startup environments due to their pace, 
-                      requirement for agency, and initmate team settings. Through startups I hope to build things that matter,
-                       learn from incredible people, and hopefully make a small dent in solving problems that affect real communities.
+                      What drives me is curiosity and the thrill of building things that matter. I enjoy working in startup environments 
+                      due to their pace, requirement for agency, and intimate team settings. Through startups I hope to build things that matter,
+                      learn from incredible people, and hopefully make a small dent in solving problems that affect real communities.
                     </p>
                   </div>
                 </div>

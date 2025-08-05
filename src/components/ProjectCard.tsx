@@ -12,9 +12,10 @@ interface ProjectCardProps {
   githubUrl?: string;
   demoUrl?: string;
   slug: string;
-  featured?: boolean;
   active?: boolean;
   comingSoon?: boolean;
+  showcase?: boolean;
+  articleUrl?: string;
 }
 
 const ProjectCard = ({
@@ -26,14 +27,15 @@ const ProjectCard = ({
   githubUrl,
   demoUrl,
   slug,
-  featured = false,
   active = false,
   comingSoon = false,
+  showcase = false,
+  articleUrl,
 }: ProjectCardProps) => {
   const categoryColors = {
-    personal: "bg-primary/10 text-primary",
-    contracting: "bg-secondary/10 text-secondary",
-    hackathons: "bg-accent/10 text-accent",
+    personal: "bg-blue-50 text-blue-600 border-blue-100",
+    contracting: "bg-secondary/20 text-secondary border-secondary/30",
+    hackathons: "bg-gray-100 text-gray-700 border-gray-200",
   };
 
   const categoryLabels = {
@@ -42,8 +44,11 @@ const ProjectCard = ({
     hackathons: "Hackathon",
   };
 
+  // Determine if this project has external links but no detailed page
+  const hasExternalLinks = githubUrl || demoUrl || articleUrl;
+
   return (
-    <Card className={`group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 ${featured ? 'ring-2 ring-primary/20' : ''}`}>
+    <Card className={`group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 `}>
       <CardHeader>
         <div className="flex justify-between items-start mb-2">
           <Badge className={categoryColors[category]}>
@@ -80,37 +85,83 @@ const ProjectCard = ({
         </div>
       </CardContent>
       
-      <CardFooter className="flex justify-between items-center">
-        {comingSoon ? (
-          <Button variant="ghost" size="sm" disabled>
-            More Info Coming Soon
-          </Button>
-        ) : (
-          <Button asChild variant="ghost" size="sm">
-            <Link href={`/projects/${slug}`}>
-              Learn More
-            </Link>
-          </Button>
+      <CardFooter className="flex flex-col gap-3">
+        {/* Coming Soon Projects - NO LINKS */}
+        {comingSoon && (
+          <div className="w-full">
+            <Button variant="ghost" size="sm" disabled className="w-full text-muted-foreground">
+              📝 More Info Coming Soon
+            </Button>
+          </div>
         )}
-        
-        {!comingSoon && (
-          <div className="flex space-x-2">
-            {githubUrl && (
-              <Button asChild variant="outline" size="sm">
-                <Link href={githubUrl} target="_blank" rel="noopener noreferrer">
-                  GitHub
-                </Link>
-              </Button>
-            )}
-            {demoUrl && (
-              <Button asChild variant="outline" size="sm">
-                <Link href={demoUrl} target="_blank" rel="noopener noreferrer">
-                  Demo
-                </Link>
-              </Button>
+
+        {/* Complete Projects with Detailed Pages */}
+        {!comingSoon && !showcase && hasExternalLinks && (
+          <div className="w-full space-y-3">
+            <Button asChild variant="outline" size="sm" className="w-full text-foreground hover:text-accent">
+              <Link href={`/projects/${slug}`}>
+                📖 Learn More
+              </Link>
+            </Button>
+            <div className="flex flex-wrap gap-2 w-full">
+              {githubUrl && (
+                <Button asChild variant="outline" size="sm" className="border-purple-200 text-purple-700 hover:bg-purple-50 hover:border-purple-300">
+                  <Link href={githubUrl} target="_blank" rel="noopener noreferrer">
+                    GitHub
+                  </Link>
+                </Button>
+              )}
+              {demoUrl && (
+                <Button asChild variant="outline" size="sm" className="border-green-200 text-green-700 hover:bg-green-50 hover:border-green-300">
+                  <Link href={demoUrl} target="_blank" rel="noopener noreferrer">
+                    Demo
+                  </Link>
+                </Button>
+              )}
+              {articleUrl && (
+                <Button asChild variant="outline" size="sm" className="border-orange-200 text-orange-700 hover:bg-orange-50 hover:border-orange-300">
+                  <Link href={articleUrl} target="_blank" rel="noopener noreferrer">
+                    Article
+                  </Link>
+                </Button>
+              )}
+            </div>
+          </div>
+        )}
+
+        {/* Showcase Projects - External links only, no Learn More page */}
+        {showcase && (
+          <div className="w-full space-y-3">
+            {/* Show external links for showcase projects */}
+            {(githubUrl || demoUrl || articleUrl) && (
+              <div className="flex flex-wrap gap-2 w-full">
+                {githubUrl && (
+                  <Button asChild variant="outline" size="sm" className="border-purple-200 text-purple-700 hover:bg-purple-50 hover:border-purple-300">
+                    <Link href={githubUrl} target="_blank" rel="noopener noreferrer">
+                      GitHub
+                    </Link>
+                  </Button>
+                )}
+                {demoUrl && (
+                  <Button asChild variant="outline" size="sm" className="border-green-200 text-green-700 hover:bg-green-50 hover:border-green-300">
+                    <Link href={demoUrl} target="_blank" rel="noopener noreferrer">
+                      Demo
+                    </Link>
+                  </Button>
+                )}
+                {articleUrl && (
+                  <Button asChild variant="outline" size="sm" className="border-orange-200 text-orange-700 hover:bg-orange-50 hover:border-orange-300">
+                    <Link href={articleUrl} target="_blank" rel="noopener noreferrer">
+                      Article
+                    </Link>
+                  </Button>
+                )}
+              </div>
             )}
           </div>
         )}
+
+        
       </CardFooter>
     </Card>
   );

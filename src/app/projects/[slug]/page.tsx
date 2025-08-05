@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
-import { projectDetails } from "@/content/config";
+import { projectDetails, ProjectDetail } from "@/content/config";
 
 // Import projects from centralized config
 const projects = projectDetails;
@@ -32,9 +32,16 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
   };
 }
 
+// Helper function to extract YouTube video ID
+function getYouTubeVideoId(url: string): string | null {
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+  const match = url.match(regExp);
+  return (match && match[2].length === 11) ? match[2] : null;
+}
+
 export default async function ProjectPage({ params }: ProjectPageProps) {
   const { slug } = await params;
-  const project = projects[slug as keyof typeof projects];
+  const project = projects[slug as keyof typeof projects] as ProjectDetail;
 
   if (!project) {
     notFound();
@@ -52,6 +59,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     hackathons: "Hackathon Project",
   };
 
+  // Extract YouTube video ID if demoUrl exists
+  const videoId = project.demoUrl ? getYouTubeVideoId(project.demoUrl) : null;
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -60,6 +70,13 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <section className="py-20 bg-gradient-to-br from-background via-background to-muted/30">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
+              {/* Back to Projects Button - Top Right */}
+              <div className="flex justify-end mb-6">
+                <Button asChild variant="outline" size="sm">
+                  <Link href="/projects">← Back to Projects</Link>
+                </Button>
+              </div>
+              
               <div className="mb-6 flex gap-3">
                 <Badge className={categoryColors[project.category as keyof typeof categoryColors]}>
                   {categoryLabels[project.category as keyof typeof categoryLabels]}
@@ -83,24 +100,56 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   </Badge>
                 ))}
               </div>
-              <div className="flex space-x-4">
+              <div className="flex flex-wrap gap-4 justify-center">
                 {'githubUrl' in project && project.githubUrl && (
-                  <Button asChild>
+                  <Button asChild className="bg-slate-700 hover:bg-slate-800 text-white border-0 shadow-md hover:shadow-lg transition-all duration-300">
                     <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      View on GitHub
+                      View GitHub
                     </Link>
                   </Button>
                 )}
-                <Button asChild variant="outline">
-                  <Link href="/projects">← Back to Projects</Link>
-                </Button>
+                {'githubUrl2' in project && project.githubUrl2 && (
+                  <Button asChild className="bg-slate-700 hover:bg-slate-800 text-white border-0 shadow-md hover:shadow-lg transition-all duration-300">
+                    <Link href={project.githubUrl2} target="_blank" rel="noopener noreferrer">
+                      View Second GitHub Repo
+                    </Link>
+                  </Button>
+                )}
+                {'articleUrl' in project && project.articleUrl && (
+                  <Button asChild className="bg-emerald-700 hover:bg-emerald-800 text-white border-0 shadow-md hover:shadow-lg transition-all duration-300">
+                    <Link href={project.articleUrl} target="_blank" rel="noopener noreferrer">
+                       Read Article
+                    </Link>
+                  </Button>
+                )}
               </div>
             </div>
           </div>
         </section>
 
+        {/* Video Demo Section */}
+        {videoId && (
+          <section className="py-8 bg-background">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Project Demo</h2>
+                <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                  <iframe
+                    className="absolute top-0 left-0 w-full h-full rounded-lg"
+                    src={`https://www.youtube.com/embed/${videoId}`}
+                    title="Project Demo"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Impact Highlight */}
-        <section className="py-16 bg-background">
+        <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <Card className="border-2 border-secondary/20">
@@ -116,7 +165,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </section>
 
         {/* Project Details */}
-        <section className="py-16 bg-muted/30">
+        <section className="py-16 bg-background">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto space-y-16">
               {/* Overview */}
@@ -216,26 +265,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </section>
 
         {/* Call to Action */}
-        <section className="py-16 bg-background">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold text-foreground mb-4">
-                Interested in Similar Projects?
-              </h2>
-              <p className="text-xl text-muted-foreground mb-8">
-                Let&apos;s discuss how we can work together on your next innovative project.
-              </p>
-              <div className="flex justify-center space-x-4">
-                <Button asChild size="lg">
-                  <Link href="/contact">Get in Touch</Link>
-                </Button>
-                <Button asChild variant="outline" size="lg">
-                  <Link href="/projects">View More Projects</Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>
