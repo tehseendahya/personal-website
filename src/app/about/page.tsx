@@ -51,13 +51,13 @@ export default function AboutPage() {
                     </p>
                     
                     <p>
-                      My interest in mission-driventechnology crystallized during an eight week stay in Moshi, Tanzania when I was 16. Working with local kids 
+                      My interest in mission-driven technology crystallized during an eight-week stay in Moshi, Tanzania, when I was 16. Working with local kids 
                       and seeing firsthand how resource and mindset constraints affect education made me realize that the most meaningful problems 
-                      require hands on understanding and experience, rather than classroom or code-based theoretical solutions.
+                      require hands-on understanding and experience, rather than classroom or code-based theoretical solutions.
                     </p>
 
                     <p>
-                      Most of my time is spent working on projects that combine emerging technology with some sort of political or social-economic implication. 
+                      Most of my time is spent working on projects that combine emerging technology with some sort of political or socio-economic implication. 
                       I&apos;ve been fortunate to work with some incredible companies as an intern or contractor, but some of my favorite 
                       projects have been the late-night builds and personal experiments that started as &quot;what if we could...&quot; conversations with friends.
                     </p>
@@ -70,7 +70,7 @@ export default function AboutPage() {
 
                     <p>
                       What drives me is curiosity and the thrill of building things that matter. I enjoy working in startup environments 
-                      due to their pace, requirement for agency, and intimate team settings. Through startups I hope to build things that matter,
+                      due to their pace, requirement for agency, and intimate team settings. Through startups, I hope to build things that matter,
                       learn from incredible people, and hopefully make a small dent in solving problems that affect real communities.
                     </p>
                   </div>

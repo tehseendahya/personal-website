@@ -3,11 +3,11 @@ export const siteConfig = {
   // Personal Information
   personal: {
     name: "Tehseen Dahya",
-    bio: "Student At Duke University studying Electrical and Computer Engineering. Passionate about using technology to push forward what humanity thought was possible last week.",
+    bio: "Student At Duke University studying Electrical and Computer Engineering. Passionate about startups andusing technology to push forward what humanity thought was possible last week.",
     location: "Toronto & North Carolina",
     email: "hello@tehseendahya.com",
     status: "Building AI Agents for Healthcare",
-    expertise: ["Full Stack Development", "LLM Orchestration", "Web3 & Blockchain"],
+    expertise: ["Full Stack Development", "LLM Orchestration", "Blockchain"],
     values: ["close relationships", "personal growth", "community advancement"],
   },
 
@@ -39,7 +39,7 @@ export const siteConfig = {
       title: "AI Agents for Healthcare",
       description: "Developing agents to assist healthcare providers in the autism space with scheduling, insurance verification, customer support, and recruiting.",
       category: "contracting" as const,
-      technologies: ["Python", "LLM Orchestration", "RAG", "Healthcare", "Machine Learning"],
+      technologies: ["LLM Orchestration", "RAG", "Healthcare", "Machine Learning"],
       impact: "Currently in development", 
       slug: "ai-agents-healthcare",
       active: true,
