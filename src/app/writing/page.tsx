@@ -13,7 +13,12 @@ export const metadata: Metadata = {
 };
 
 export default function WritingPage() {
-  const posts = siteConfig.writing;
+  // Sort posts by date (newest first)
+  const posts = [...siteConfig.writing].sort((a, b) => {
+    const dateA = new Date(a.date).getTime();
+    const dateB = new Date(b.date).getTime();
+    return dateB - dateA; // Descending order (newest first)
+  });
 
   return (
     <div className="min-h-screen">
@@ -61,7 +66,7 @@ export default function WritingPage() {
                     <article className="group cursor-pointer">
                       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                       {/* Image */}
-                      <div className="order-2 lg:order-1">
+                      <div className="order-2 lg:order-1 relative">
                         <div className="aspect-[16/10] relative overflow-hidden rounded-xl bg-muted">
                           <CoverImage
                             src={post.coverImage || ""}
@@ -69,6 +74,14 @@ export default function WritingPage() {
                             source={post.source}
                           />
                         </div>
+                        {/* Date in top right of image card */}
+                        {(post as { displayDate?: string }).displayDate && (
+                          <div className="absolute top-3 right-3 bg-background/90 backdrop-blur-sm px-3 py-1 rounded-md">
+                            <span className="text-xs text-muted-foreground font-medium">
+                              {(post as { displayDate: string }).displayDate}
+                            </span>
+                          </div>
+                        )}
                       </div>
                       
                       {/* Content */}
@@ -77,7 +90,6 @@ export default function WritingPage() {
                           <Badge variant="secondary" className="capitalize">
                             {post.source}
                           </Badge>
-                          <span>{post.date}</span>
                           <span>•</span>
                           <span>{post.readTime}</span>
                         </div>

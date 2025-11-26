@@ -3,9 +3,44 @@ import { Button } from "@/components/ui/button";
 import ProjectCard from "@/components/ProjectCard";
 import { siteConfig } from "@/content/config";
 
+// Helper function to parse date string to sortable value
+function parseDateForSorting(dateStr: string | undefined): number {
+  if (!dateStr) return 0;
+  
+  // If date contains "Present", return a very large number to rank it highest
+  if (dateStr.includes('Present')) {
+    return 999999; // Very large number to ensure it's always first
+  }
+  
+  // Handle date ranges like "May 2024 - July 2024" (use the first date)
+  const datePart = dateStr.split(' - ')[0];
+  
+  // Parse "Month YYYY" format
+  const months: { [key: string]: number } = {
+    'January': 1, 'February': 2, 'March': 3, 'April': 4, 'May': 5, 'June': 6,
+    'July': 7, 'August': 8, 'September': 9, 'October': 10, 'November': 11, 'December': 12
+  };
+  
+  const parts = datePart.trim().split(' ');
+  if (parts.length === 2) {
+    const month = months[parts[0]];
+    const year = parseInt(parts[1]);
+    if (month && year) {
+      return year * 100 + month; // Year * 100 + month for easy sorting
+    }
+  }
+  
+  return 0;
+}
+
 const ProjectsOverview = () => {
-  // Get first 3 projects as featured projects
-  const featuredProjects = siteConfig.projects.slice(0, 3);
+  // Sort projects by date (newest first) and get first 3 as featured projects
+  const sortedProjects = [...siteConfig.projects].sort((a, b) => {
+    const dateA = parseDateForSorting((a as { date?: string }).date);
+    const dateB = parseDateForSorting((b as { date?: string }).date);
+    return dateB - dateA; // Descending order (newest first)
+  });
+  const featuredProjects = sortedProjects.slice(0, 3);
   const categories = siteConfig.projectCategories.map(category => ({
     ...category,
     count: siteConfig.projects.filter(p => p.category === category.href.split('/').pop()).length

@@ -44,6 +44,7 @@ export const siteConfig = {
       slug: "ai-agents-healthcare",
       active: true,
       comingSoon: true,
+      date: "June 2025 - Present",
     },
     {
       title: "Daylee",
@@ -53,6 +54,19 @@ export const siteConfig = {
       impact: "Building daily accountability system for solo founders to maintain consistency and discover collaboration opportunities",
       demoUrl: "https://www.loom.com/share/6ac44bc0f1f648fda3526a186f33fb4f?sid=dc1d96a4-ad3b-4a79-9c3f-6171493b86cb",
       slug: "daylee",
+      date: "June 2024 - September 2024",
+    },
+    {
+      title: "Rabbithole",
+      description: "Research organization platform with tree-based context management and semantic clustering to help researchers organize deep dives, ideation, and complex idea boards.",
+      category: "hackathons" as const,
+      technologies: ["AI/ML", "Semantic Clustering", "Tree Data Structures", "Research Tools", "Context Management"],
+      impact: "Won 3rd place at Neo Hackathon. Testing market with Bio researchers for idea board organization.",
+      demoUrl: "https://youtu.be/xVqi0sJ7xJU",
+      websiteUrl: "https://rabbithole-cl.vercel.app/",
+      slug: "rabbithole",
+      showcase: true,
+      date: "November 2025 - Present",
     },
     {
       title: "Internet Routing Optimization",
@@ -63,6 +77,7 @@ export const siteConfig = {
       articleUrl: "https://tksworld.notion.site/Optimizing-Internet-Routing-Algorithms-with-Gradient-Boosting-411d4952f5704639b70b807c7185c58c",
       demoUrl: "https://www.youtube.com/watch?v=BpXbB1gkLRU&feature=youtu.be",
       slug: "internet-routing-optimization",
+      date: "October 2024 - January 2025",
     },
     {
       title: "Electricity Demand Forecasting",
@@ -73,6 +88,17 @@ export const siteConfig = {
       articleUrl: "https://medium.com/@tdahya2/predicting-us-electricity-usage-a-comparison-of-two-approaches-34303b81a4aa",
       githubUrl: "https://github.com/tehseendahya/Energy_predict_xgboost",
       slug: "electricity-demand-forecasting",
+      date: "September 2024",
+    },
+    {
+      title: "BenchSci RAG + AI Research Platform",
+      description: "AI-powered research platform designed to accelerate scientific discovery and laboratory efficiency through intelligent data analysis and experimental optimization.",
+      category: "contracting" as const,
+      demoUrl: "https://www.youtube.com/watch?v=6bFD5ksRM6w&feature=youtu.be",
+      technologies: ["Python", "AI", "RAG", "LLM Orchestration"],
+      impact: "Winner - won an internship at BenchSci for Summer 2024",
+      slug: "benchsci-ai-platform",
+      date: "August 2023",
     },
     {
       title: "Photonix Climate Solution",
@@ -83,6 +109,7 @@ export const siteConfig = {
       articleUrl: "https://medium.com/@tdahya2/can-lasers-put-an-end-to-climate-change-b566a915da60",
       demoUrl: "https://www.youtube.com/watch?v=3LYy043jBY4",
       slug: "photonix",
+      date: "June 2023",
     },
     {
       title: "EventChain",
@@ -94,6 +121,7 @@ export const siteConfig = {
       articleUrl: "https://medium.com/@tdahya2/no-more-scalping-ecd045215e48",
       demoUrl: "https://www.youtube.com/watch?v=1a7QcINN6GQ&feature=youtu.be",
       slug: "eventchain",
+      date: "May 2023",
     },
     {
       title: "Web3.0's Twitter",
@@ -106,6 +134,7 @@ export const siteConfig = {
       articleUrl: "https://medium.com/@tdahya2/the-social-network-of-the-future-web3-0s-twitter-71bd1833e918",
       demoUrl: "https://www.youtube.com/watch?v=fKB0EislgSo",
       slug: "web3-twitter",
+      date: "March 2023",
     },
     {
       title: "ZK-SNARK Implementation",
@@ -117,17 +146,7 @@ export const siteConfig = {
       articleUrl: "https://medium.com/@tdahya2/creating-a-zk-snark-with-circom-2-0-2095e48c6784",
       demoUrl: "https://www.youtube.com/watch?v=d0XQk1h-ork",
       slug: "zk-snark-identity",
-    },
-
-    // Contract Projects
-    {
-      title: "BenchSci RAG + AI Research Platform",
-      description: "AI-powered research platform designed to accelerate scientific discovery and laboratory efficiency through intelligent data analysis and experimental optimization.",
-      category: "contracting" as const,
-      demoUrl: "https://www.youtube.com/watch?v=6bFD5ksRM6w&feature=youtu.be",
-      technologies: ["Python", "AI", "RAG", "LLM Orchestration"],
-      impact: "Winner - won an internship at BenchSci for Summer 2024",
-      slug: "benchsci-ai-platform",
+      date: "January 2023",
     },
     {
       title: "Amazon Alexa Integration",
@@ -138,6 +157,7 @@ export const siteConfig = {
       slug: "amazon-alexa-integration",
       demoUrl: "https://firebasestorage.googleapis.com/v0/b/tks-life-prod.appspot.com/o/items%2Ftehseen.dahya%2FAmazon%20Alexa%20Recommendation%20Deck.pdf?alt=media&token=b4661f7d-abbd-4a56-8839-65ff8169b252",
       showcase: true,
+      date: "March 2023",
     },
     {
       title: "CIBC Canada Digital Banking",
@@ -148,19 +168,7 @@ export const siteConfig = {
       slug: "cibc-digital-banking",
       demoUrl: "https://firebasestorage.googleapis.com/v0/b/tks-life-prod.appspot.com/o/items%2Ftehseen.dahya%2FCIBC%20Recommendation%20Deck%20(1).pdf?alt=media&token=574c6156-568b-40cd-a825-5d7a979c1490",
       showcase: true,
-    },
-
-    // Hackathon Projects
-    {
-      title: "Rabbithole",
-      description: "Research organization platform with tree-based context management and semantic clustering to help researchers organize deep dives, ideation, and complex idea boards.",
-      category: "hackathons" as const,
-      technologies: ["AI/ML", "Semantic Clustering", "Tree Data Structures", "Research Tools", "Context Management"],
-      impact: "Won 3rd place at Neo Hackathon. Testing market with Bio researchers for idea board organization.",
-      demoUrl: "https://youtu.be/xVqi0sJ7xJU",
-      websiteUrl: "https://rabbithole-cl.vercel.app/",
-      slug: "rabbithole",
-      showcase: true,
+      date: "November 2022",
     },
     {
       title: "Autonomous Rescue Bots",
@@ -171,6 +179,7 @@ export const siteConfig = {
       articleUrl: "https://loud-vinyl-715.notion.site/Optimizing-post-disaster-rescue-robots-to-save-lives-20x-faster-de846cac217e4c99a4e36fa9e6ce283f",
       slug: "autonomous-rescue-bots",
       showcase: true,
+      date: "October 2023",
     },
     {
       title: "CapsuLedger",
@@ -181,6 +190,7 @@ export const siteConfig = {
       articleUrl: "https://tehseendahya.substack.com/i/102085018/using-the-blockchain-to-save-million-lives",
       slug: "capsuledger",
       showcase: true,
+      date: "February 2023",
     },
     {
       title: "mEye Vote",
@@ -190,6 +200,7 @@ export const siteConfig = {
       impact: "Proof of concept for secure digital voting",
       slug: "meye-vote",
       showcase: true,
+      date: "October 2022",
     },
   ],
 
@@ -200,6 +211,7 @@ export const siteConfig = {
       title: "From San Francisco to Tanzania to North Carolina - Summer '24 recap",
       excerpt: "The last few months have been filled with traveling to new cities, working at new companies, and building new projects. But most importantly I've met some pretty awesome people.",
       date: "2024-08-15",
+      displayDate: "August 2024",
       readTime: "8 min read",
       source: "Substack",
       tags: ["Travel", "Internship", "Personal Growth", "Tanzania", "San Francisco"],
@@ -210,6 +222,7 @@ export const siteConfig = {
       title: "How I'm setting up the next phase of my life",
       excerpt: "New academic year, new projects, new people. Reflections on transitioning from high school to college and the opportunities ahead.",
       date: "2024-03-14",
+      displayDate: "March 2024",
       readTime: "6 min read",
       source: "Substack",
       tags: ["Personal Growth", "College", "Life Transitions"],
@@ -223,6 +236,7 @@ export const siteConfig = {
       title: "Extending Global Internet Access without building anything",
       excerpt: "A technical exploration of web performance, loading states, and user experience optimization in modern web applications.",
       date: "2024-02-10",
+      displayDate: "February 2024",
       readTime: "5 min read",
       source: "Medium",
       tags: ["Web Development", "Performance", "UX"],
@@ -233,6 +247,7 @@ export const siteConfig = {
       title: "Predicting US Electricity Usage: A Comparison of Two Approaches",
       excerpt: "Comparison of two machine learning models and their accuracies in predicting US electricity demand using different algorithmic approaches.",
       date: "2024-01-20",
+      displayDate: "January 2024",
       readTime: "8 min read",
       source: "Medium",
       tags: ["Machine Learning", "Energy", "Data Science", "Prediction Models"],
@@ -243,6 +258,7 @@ export const siteConfig = {
       title: "Daily blogs from my time teaching in Moshi, Tanzania",
       excerpt: "Personal reflections and daily experiences from teaching and living in Moshi, Tanzania, exploring education, culture, and community impact.",
       date: "2023-07-15",
+      displayDate: "July 2023",
       readTime: "10 min read",
       source: "Medium",
       tags: ["Tanzania", "Teaching", "Travel", "Education", "Cultural Exchange"],

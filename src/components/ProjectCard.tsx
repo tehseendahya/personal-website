@@ -18,6 +18,7 @@ interface ProjectCardProps {
   comingSoon?: boolean;
   showcase?: boolean;
   articleUrl?: string;
+  date?: string;
 }
 
 const ProjectCard = ({
@@ -34,6 +35,7 @@ const ProjectCard = ({
   comingSoon = false,
   showcase = false,
   articleUrl,
+  date,
 }: ProjectCardProps) => {
   const categoryColors = {
     personal: "bg-blue-50 text-blue-600 border-blue-100",
@@ -59,9 +61,16 @@ const ProjectCard = ({
           <Badge className={categoryColors[category]}>
             {categoryLabels[category]}
           </Badge>
-          {active && (
-            <Badge variant="default" className="bg-green-500 hover:bg-green-600">Currently Working On</Badge>
-          )}
+          <div className="flex items-center gap-2">
+            {date && (
+              <span className="text-xs text-muted-foreground font-medium">
+                {date}
+              </span>
+            )}
+            {active && (
+              <Badge variant="default" className="bg-green-500 hover:bg-green-600">Currently Working On</Badge>
+            )}
+          </div>
         </div>
         <CardTitle className="text-xl group-hover:text-primary transition-colors">
           {title}
