@@ -67,6 +67,7 @@ export const siteConfig = {
       slug: "rabbithole",
       showcase: true,
       date: "November 2025 - Present",
+      active: true,
     },
     {
       title: "Internet Routing Optimization",
