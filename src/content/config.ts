@@ -215,7 +215,6 @@ export const siteConfig = {
       displayDate: "August 2024",
       readTime: "8 min read",
       source: "Substack",
-      tags: ["Travel", "Internship", "Personal Growth", "Tanzania", "San Francisco"],
       externalUrl: "https://tehseendahya.substack.com/p/from-san-francisco-to-tanzania-to",
       coverImage: "/images/writing/from-sf.png"
     },
@@ -226,7 +225,6 @@ export const siteConfig = {
       displayDate: "March 2024",
       readTime: "6 min read",
       source: "Substack",
-      tags: ["Personal Growth", "College", "Life Transitions"],
       externalUrl: "https://tehseendahya.substack.com/p/how-im-setting-up-the-next-phase",
       coverImage: "/images/writing/how.png"
     },
@@ -240,7 +238,6 @@ export const siteConfig = {
       displayDate: "February 2024",
       readTime: "5 min read",
       source: "Medium",
-      tags: ["Web Development", "Performance", "UX"],
       externalUrl: "https://medium.com/@tdahya2/loading-please-refresh-to-access-421a0c3b79b7",
       coverImage: "/images/writing/internet-routing.png"
     },
@@ -251,7 +248,6 @@ export const siteConfig = {
       displayDate: "January 2024",
       readTime: "8 min read",
       source: "Medium",
-      tags: ["Machine Learning", "Energy", "Data Science", "Prediction Models"],
       externalUrl: "https://medium.com/@tdahya2/predicting-us-electricity-usage-a-comparison-of-two-approaches-34303b81a4aa",
       coverImage: "/images/writing/electricity-predict.png"
     },
@@ -262,7 +258,6 @@ export const siteConfig = {
       displayDate: "July 2023",
       readTime: "10 min read",
       source: "Medium",
-      tags: ["Tanzania", "Teaching", "Travel", "Education", "Cultural Exchange"],
       externalUrl: "https://medium.com/@tdahya2/daily-blogs-from-my-time-teaching-in-moshi-tanzania-2f22b9576514",
       coverImage: "/images/writing/tanzania-blogs.png"
     },

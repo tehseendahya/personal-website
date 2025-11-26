@@ -102,14 +102,6 @@ export default function WritingPage() {
                           {post.excerpt}
                         </p>
                         
-                        <div className="flex flex-wrap gap-2">
-                          {post.tags.slice(0, 3).map((tag) => (
-                            <span key={tag} className="text-sm text-muted-foreground">
-                              #{tag.toLowerCase().replace(/\s+/g, '')}
-                            </span>
-                          ))}
-                        </div>
-                        
                         <div className="pt-2">
                           <span className="text-primary font-medium group-hover:underline">
                             Read full article →
