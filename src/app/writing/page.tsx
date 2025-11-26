@@ -4,8 +4,8 @@ import Footer from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import Image from "next/image";
 import { siteConfig } from "@/content/config";
+import CoverImage from "@/components/writing/CoverImage";
 
 export const metadata: Metadata = {
   title: "Writing - Insights & Stories",
@@ -63,21 +63,11 @@ export default function WritingPage() {
                       {/* Image */}
                       <div className="order-2 lg:order-1">
                         <div className="aspect-[16/10] relative overflow-hidden rounded-xl bg-muted">
-                          {post.coverImage ? (
-                            <Image
-                              src={post.coverImage}
-                              alt={post.title}
-                              fill
-                              className="object-cover transition-all duration-500 group-hover:scale-105"
-                              sizes="(max-width: 768px) 100vw, 50vw"
-                            />
-                          ) : (
-                            <div className="h-full bg-gradient-to-br from-muted to-muted/60 flex items-center justify-center">
-                              <div className="text-6xl opacity-40">
-                                {post.source === "Medium" ? "📰" : "💌"}
-                              </div>
-                            </div>
-                          )}
+                          <CoverImage
+                            src={post.coverImage || ""}
+                            alt={post.title}
+                            source={post.source}
+                          />
                         </div>
                       </div>
                       
