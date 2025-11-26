@@ -77,7 +77,7 @@ export const siteConfig = {
       articleUrl: "https://tksworld.notion.site/Optimizing-Internet-Routing-Algorithms-with-Gradient-Boosting-411d4952f5704639b70b807c7185c58c",
       demoUrl: "https://www.youtube.com/watch?v=BpXbB1gkLRU&feature=youtu.be",
       slug: "internet-routing-optimization",
-      date: "October 2024 - January 2025",
+      date: "October 2023 - January 2024",
     },
     {
       title: "Electricity Demand Forecasting",
@@ -88,7 +88,7 @@ export const siteConfig = {
       articleUrl: "https://medium.com/@tdahya2/predicting-us-electricity-usage-a-comparison-of-two-approaches-34303b81a4aa",
       githubUrl: "https://github.com/tehseendahya/Energy_predict_xgboost",
       slug: "electricity-demand-forecasting",
-      date: "September 2024",
+      date: "November 2023",
     },
     {
       title: "BenchSci RAG + AI Research Platform",

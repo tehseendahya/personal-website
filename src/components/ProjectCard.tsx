@@ -57,24 +57,22 @@ const ProjectCard = ({
   return (
     <Card className={`group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 `}>
       <CardHeader>
-        <div className="flex justify-between items-start mb-2">
+        <div className="flex justify-between items-start mb-3">
           <Badge className={categoryColors[category]}>
             {categoryLabels[category]}
           </Badge>
-          <div className="flex items-center gap-2">
-            {date && (
-              <span className="text-xs text-muted-foreground font-medium">
-                {date}
-              </span>
-            )}
-            {active && (
-              <Badge variant="default" className="bg-green-500 hover:bg-green-600">Currently Working On</Badge>
-            )}
-          </div>
+          {active && (
+            <Badge variant="default" className="bg-green-500 hover:bg-green-600 text-white text-xs">Currently Working On</Badge>
+          )}
         </div>
-        <CardTitle className="text-xl group-hover:text-primary transition-colors">
+        <CardTitle className="text-xl group-hover:text-primary transition-colors mb-2">
           {title}
         </CardTitle>
+        {date && (
+          <div className="text-xs text-muted-foreground font-medium">
+            {date}
+          </div>
+        )}
       </CardHeader>
       
       <CardContent>
