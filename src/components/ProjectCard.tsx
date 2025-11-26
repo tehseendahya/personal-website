@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { projectDetails } from "@/content/config";
 
 interface ProjectCardProps {
   title: string;
@@ -11,6 +12,7 @@ interface ProjectCardProps {
   impact?: string;
   githubUrl?: string;
   demoUrl?: string;
+  websiteUrl?: string;
   slug: string;
   active?: boolean;
   comingSoon?: boolean;
@@ -26,6 +28,7 @@ const ProjectCard = ({
   impact,
   githubUrl,
   demoUrl,
+  websiteUrl,
   slug,
   active = false,
   comingSoon = false,
@@ -45,7 +48,9 @@ const ProjectCard = ({
   };
 
   // Determine if this project has external links but no detailed page
-  const hasExternalLinks = githubUrl || demoUrl || articleUrl;
+  const hasExternalLinks = githubUrl || demoUrl || articleUrl || websiteUrl;
+  // Check if this project has a detailed page
+  const hasDetailedPage = slug in projectDetails;
 
   return (
     <Card className={`group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 `}>
@@ -118,6 +123,13 @@ const ProjectCard = ({
                   </Link>
                 </Button>
               )}
+              {websiteUrl && (
+                <Button asChild variant="outline" size="sm" className="border-blue-200 text-blue-700 hover:bg-blue-50 hover:border-blue-300">
+                  <Link href={websiteUrl} target="_blank" rel="noopener noreferrer">
+                    Website
+                  </Link>
+                </Button>
+              )}
               {articleUrl && (
                 <Button asChild variant="outline" size="sm" className="border-orange-200 text-orange-700 hover:bg-orange-50 hover:border-orange-300">
                   <Link href={articleUrl} target="_blank" rel="noopener noreferrer">
@@ -129,11 +141,19 @@ const ProjectCard = ({
           </div>
         )}
 
-        {/* Showcase Projects - External links only, no Learn More page */}
+        {/* Showcase Projects - Show Learn More if detailed page exists, otherwise just external links */}
         {showcase && (
           <div className="w-full space-y-3">
+            {/* Show Learn More button if project has detailed page */}
+            {hasDetailedPage && (
+              <Button asChild variant="outline" size="sm" className="w-full text-foreground hover:text-accent">
+                <Link href={`/projects/${slug}`}>
+                  📖 Learn More
+                </Link>
+              </Button>
+            )}
             {/* Show external links for showcase projects */}
-            {(githubUrl || demoUrl || articleUrl) && (
+            {(githubUrl || demoUrl || articleUrl || websiteUrl) && (
               <div className="flex flex-wrap gap-2 w-full">
                 {githubUrl && (
                   <Button asChild variant="outline" size="sm" className="border-purple-200 text-purple-700 hover:bg-purple-50 hover:border-purple-300">
@@ -146,6 +166,13 @@ const ProjectCard = ({
                   <Button asChild variant="outline" size="sm" className="border-green-200 text-green-700 hover:bg-green-50 hover:border-green-300">
                     <Link href={demoUrl} target="_blank" rel="noopener noreferrer">
                       Demo
+                    </Link>
+                  </Button>
+                )}
+                {websiteUrl && (
+                  <Button asChild variant="outline" size="sm" className="border-blue-200 text-blue-700 hover:bg-blue-50 hover:border-blue-300">
+                    <Link href={websiteUrl} target="_blank" rel="noopener noreferrer">
+                      Website
                     </Link>
                   </Button>
                 )}
