@@ -109,6 +109,15 @@ export const siteConfig = {
       demoUrl: "https://www.youtube.com/watch?v=3LYy043jBY4",
       slug: "photonix",
     },
+    {
+      title: "Daylee",
+      description: "Social accountability platform for solo founders to post daily updates, build public streaks, and earn rewards while fostering serendipitous connections and collaboration opportunities.",
+      category: "personal" as const,
+      technologies: ["Full Stack Development", "Social Platform", "Streak Tracking", "Web Development"],
+      impact: "Building daily accountability system for solo founders to maintain consistency and discover collaboration opportunities",
+      demoUrl: "https://www.loom.com/share/6ac44bc0f1f648fda3526a186f33fb4f?sid=dc1d96a4-ad3b-4a79-9c3f-6171493b86cb",
+      slug: "daylee",
+    },
 
     // Contract Projects
     {
@@ -169,6 +178,16 @@ export const siteConfig = {
       technologies: ["Blockchain", "Biometrics", "Voting Systems", "Security"],
       impact: "Proof of concept for secure digital voting",
       slug: "meye-vote",
+      showcase: true,
+    },
+    {
+      title: "Rabbithole",
+      description: "Research organization platform with tree-based context management and semantic clustering to help researchers organize deep dives, ideation, and complex idea boards.",
+      category: "hackathons" as const,
+      technologies: ["AI/ML", "Semantic Clustering", "Tree Data Structures", "Research Tools", "Context Management"],
+      impact: "Won 3rd place at Neo Hackathon. Testing market with Bio researchers for idea board organization.",
+      demoUrl: "https://youtu.be/xVqi0sJ7xJU",
+      slug: "rabbithole",
       showcase: true,
     },
   ],
@@ -518,6 +537,69 @@ export const projectDetails = {
       "Data-driven approaches improve research efficiency and outcomes",
       "Interdisciplinary skills in AI and scientific research are highly valuable"
     ]
+  },
+  "daylee": {
+    title: "Daylee",
+    description: "Social accountability platform for solo founders to post daily updates, build public streaks, and earn rewards while fostering serendipitous connections and collaboration opportunities.",
+    category: "personal",
+    technologies: ["Full Stack Development", "Social Platform", "Streak Tracking", "Web Development", "User Engagement"],
+    impact: "Building daily accountability system for solo founders to maintain consistency and discover collaboration opportunities",
+    demoUrl: "https://www.loom.com/share/6ac44bc0f1f648fda3526a186f33fb4f?sid=dc1d96a4-ad3b-4a79-9c3f-6171493b86cb",
+    overview: "Daylee is a social accountability platform designed specifically for solo founders who want to maintain consistency in their work and build meaningful connections with other entrepreneurs. Inspired by the BeReal model, the platform requires users to post their daily updates before they can see what others are working on, creating a unique accountability mechanism that encourages genuine engagement and reduces comparison-driven anxiety.",
+    challenge: "Solo founders often struggle with maintaining consistency and accountability without a team or co-founder to keep them motivated. Traditional social media platforms create comparison anxiety and don't foster genuine collaboration. The challenge was to create a platform that combines accountability mechanisms with serendipitous connection opportunities, helping founders stay consistent while discovering potential collaborators and co-founders.",
+    solution: "Developed a social platform with a BeReal-inspired model where users must post their daily updates before viewing others' posts. The system includes public streak tracking to gamify consistency, reward mechanisms for maintaining streaks, and a feed that surfaces what friends and other founders are working on. This creates natural opportunities for collaboration, co-founder discovery, and serendipitous connections while maintaining focus on personal accountability.",
+    results: [
+      "Implemented daily update posting system with streak tracking",
+      "Created BeReal-style model requiring posts before viewing others' content",
+      "Built reward system for maintaining consistent streaks",
+      "Designed feed to surface collaboration opportunities and co-founder connections",
+      "Established platform for serendipitous networking among solo founders"
+    ],
+    technicalDetails: {
+      architecture: "Full-stack social platform with user authentication, daily posting system, streak tracking algorithms, and social feed management. System includes real-time updates, notification systems, and reward distribution mechanisms.",
+      algorithms: "Streak tracking algorithm that calculates consecutive posting days, reward distribution system based on streak milestones, and feed ranking algorithm that prioritizes relevant connections and collaboration opportunities.",
+      dataProcessing: "Real-time processing of daily updates, streak calculations, and feed generation. User activity tracking for engagement metrics and collaboration opportunity detection through content analysis.",
+      deployment: "Web-based platform accessible across devices, with real-time synchronization for streak updates and social feed. Designed for scalability to support growing community of solo founders."
+    },
+    learnings: [
+      "Daily updates create powerful accountability mechanisms for solo founders",
+      "BeReal model reduces comparison anxiety while maintaining engagement",
+      "Public streaks gamify consistency and create social accountability",
+      "Serendipitous connections are valuable for solo founders seeking collaboration",
+      "Platform design must balance accountability with positive social interaction"
+    ]
+  },
+  "rabbithole": {
+    title: "Rabbithole",
+    description: "Research organization platform with tree-based context management and semantic clustering to help researchers organize deep dives, ideation, and complex idea boards.",
+    category: "hackathons",
+    technologies: ["AI/ML", "Semantic Clustering", "Tree Data Structures", "Research Tools", "Context Management", "Natural Language Processing"],
+    impact: "Won 3rd place at Neo Hackathon. Testing market with Bio researchers for idea board organization.",
+    demoUrl: "https://youtu.be/xVqi0sJ7xJU",
+    websiteUrl: "https://rabbithole-cl.vercel.app/",
+    overview: "Rabbithole is an innovative research organization platform designed to solve the problem of context management during deep research dives and ideation sessions. The platform uses a tree-based approach to organize ideas, ensuring that only relevant ideas are included in context windows, and employs semantic clustering algorithms to automatically group related concepts, helping researchers make meaningful connections during their exploration.",
+    challenge: "Researchers and ideators struggle with managing context during deep dives, often losing track of important connections or including irrelevant information in their context windows. Traditional note-taking and organization tools don't handle the complex, interconnected nature of research ideas effectively. The challenge was to create a system that maintains context relevance while helping users discover meaningful connections between ideas.",
+    solution: "Developed a tree-based research organization platform where ideas are structured hierarchically, allowing users to control which branches of their research are included in context windows. The system uses semantic clustering algorithms to automatically group related ideas, helping researchers discover connections they might have missed. This approach ensures efficient context management while facilitating serendipitous discovery of relationships between concepts.",
+    results: [
+      "Won 3rd place at Neo Hackathon",
+      "Implemented tree-based context management system for research organization",
+      "Developed semantic clustering algorithm for automatic idea grouping",
+      "Created platform that helps researchers maintain relevant context during deep dives",
+      "Currently testing market with Bio researchers for idea board organization"
+    ],
+    technicalDetails: {
+      architecture: "Research organization platform with tree-based data structure for hierarchical idea management, semantic clustering engine for automatic grouping, and context window management system. Includes user interface for navigating research trees and visualizing connections.",
+      algorithms: "Semantic clustering algorithm using natural language processing to group related ideas, tree traversal algorithms for context window generation, and similarity scoring for connection discovery between research concepts.",
+      dataProcessing: "Natural language processing for semantic analysis of research ideas, tree structure management for hierarchical organization, and real-time clustering updates as new ideas are added. Context window optimization to include only relevant branches.",
+      deployment: "Web-based platform accessible at rabbithole-cl.vercel.app, designed for researchers to organize complex research projects. Currently in market testing phase with Bio researchers to validate product-market fit for idea board organization."
+    },
+    learnings: [
+      "Tree-based structures are effective for managing complex, interconnected research ideas",
+      "Semantic clustering can automatically discover meaningful connections between concepts",
+      "Context management is crucial for maintaining focus during deep research dives",
+      "Market validation with specific user groups (Bio researchers) provides valuable feedback",
+      "Hackathon projects can quickly validate innovative approaches to research organization"
+    ]
   }
 };
 
@@ -546,6 +628,7 @@ export type ProjectDetail = {
   githubUrl2?: string;
   articleUrl?: string;
   demoUrl?: string;
+  websiteUrl?: string;
   active?: boolean;
   comingSoon?: boolean;
 }; 

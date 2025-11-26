@@ -122,6 +122,20 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                     </Link>
                   </Button>
                 )}
+                {'demoUrl' in project && project.demoUrl && !videoId && (
+                  <Button asChild className="bg-red-600 hover:bg-red-700 text-white border-0 shadow-md hover:shadow-lg transition-all duration-300">
+                    <Link href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+                      View Demo
+                    </Link>
+                  </Button>
+                )}
+                {'websiteUrl' in project && project.websiteUrl && (
+                  <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white border-0 shadow-md hover:shadow-lg transition-all duration-300">
+                    <Link href={project.websiteUrl} target="_blank" rel="noopener noreferrer">
+                      Visit Website
+                    </Link>
+                  </Button>
+                )}
               </div>
             </div>
           </div>
