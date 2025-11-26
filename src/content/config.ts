@@ -203,7 +203,7 @@ export const siteConfig = {
       source: "Substack",
       tags: ["Travel", "Internship", "Personal Growth", "Tanzania", "San Francisco"],
       externalUrl: "https://tehseendahya.substack.com/p/from-san-francisco-to-tanzania-to",
-      coverImage: "/images/writing/summer-24-recap.jpg"
+      coverImage: "/images/writing/from-sf.png"
     },
     {
       title: "How I'm setting up the next phase of my life",
@@ -213,7 +213,7 @@ export const siteConfig = {
       source: "Substack",
       tags: ["Personal Growth", "College", "Life Transitions"],
       externalUrl: "https://tehseendahya.substack.com/p/how-im-setting-up-the-next-phase",
-      coverImage: "/images/writing/how-im-setting-up.png"
+      coverImage: "/images/writing/how.png"
     },
   
     
@@ -226,7 +226,7 @@ export const siteConfig = {
       source: "Medium",
       tags: ["Web Development", "Performance", "UX"],
       externalUrl: "https://medium.com/@tdahya2/loading-please-refresh-to-access-421a0c3b79b7",
-      coverImage: "/images/writing/internet-medium.webp"
+      coverImage: "/images/writing/internet-routing.png"
     },
     {
       title: "Predicting US Electricity Usage: A Comparison of Two Approaches",
@@ -236,7 +236,7 @@ export const siteConfig = {
       source: "Medium",
       tags: ["Machine Learning", "Energy", "Data Science", "Prediction Models"],
       externalUrl: "https://medium.com/@tdahya2/predicting-us-electricity-usage-a-comparison-of-two-approaches-34303b81a4aa",
-      coverImage: "/images/writing/electricity-predict.webp"
+      coverImage: "/images/writing/electricity-predict.png"
     },
     {
       title: "Daily blogs from my time teaching in Moshi, Tanzania",
