@@ -84,7 +84,7 @@ export const places: {
     lon: -74.0,
     lat: 40.7,
     story: "A summer at Palantir, on AI document workflows and procurement forecasting.",
-    link: { label: "What I can say about it", href: "/work/palantir" },
+    link: { label: "More on the work", href: "/work/palantir" },
   },
   {
     id: "moshi",

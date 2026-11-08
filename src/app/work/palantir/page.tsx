@@ -14,7 +14,7 @@ export default function PalantirPage() {
     <PageShell>
       <CaseHeader
         title="Document and procurement AI at Palantir"
-        standfirst="I spent summer 2026 as a deployment strategist intern in New York, on two customer teams. Here's what the work was, kept to what I'm allowed to share."
+        standfirst="I spent summer 2026 as a deployment strategist intern in New York, working with two customers: an insurer and a medical-supply company."
         facts={[
           { label: "When", value: "May to August 2026" },
           { label: "Role", value: "Deployment strategist intern" },
@@ -69,11 +69,6 @@ export default function PalantirPage() {
               </li>
             </ul>
 
-            <p>
-              I can&apos;t share customer names, documents, architecture or anything internal. If
-              you want to talk about the kind of problem, I&apos;m happy to,{" "}
-              <a href="mailto:tdahya2@gmail.com">over email</a>.
-            </p>
           </div>
         </div>
         <p className="mx-auto mt-12 max-w-[760px] lg:mx-0 lg:ml-[8%]">

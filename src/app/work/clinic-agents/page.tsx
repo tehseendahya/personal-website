@@ -181,11 +181,6 @@ export default function ClinicAgentsPage() {
               </li>
             </ul>
 
-            <p>
-              No patient data, clinic names or internal details appear on this page. If you&apos;re
-              building something similar and want to compare notes,{" "}
-              <a href="mailto:tdahya2@gmail.com">email me</a>.
-            </p>
           </div>
         </div>
 

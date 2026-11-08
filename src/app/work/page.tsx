@@ -21,7 +21,7 @@ const caseStudies = [
     href: "/work/palantir",
     title: "Document and procurement AI at Palantir",
     meta: "Summer 2026, internship",
-    blurb: "What deployment work actually looks like, kept within what I'm allowed to say.",
+    blurb: "Extraction agents for an insurer and procurement forecasting for a medical-supply company.",
   },
 
 ];

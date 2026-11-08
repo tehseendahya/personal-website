@@ -36,7 +36,7 @@ export const nodes: MapNode[] = [
     type: "work",
     label: "Palantir",
     note: "Summer 2026 in New York as a deployment strategist intern: AI document workflows for an insurance customer, then procurement forecasting for a medical-supply one.",
-    link: { label: "What I can say about it", href: "/work/palantir" },
+    link: { label: "More on the work", href: "/work/palantir" },
   },
   {
     id: "benchsci",
