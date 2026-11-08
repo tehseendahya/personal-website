@@ -1,65 +1,53 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Archivo, Kalam, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
+import { site } from "@/content/site";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
 
-const inter = Inter({
+const archivo = Archivo({
   subsets: ["latin"],
-  variable: "--font-inter",
+  axes: ["wdth"],
+  variable: "--font-archivo",
+});
+
+const serif = Source_Serif_4({
+  subsets: ["latin"],
+  axes: ["opsz"],
+  style: ["normal", "italic"],
+  variable: "--font-source-serif",
+});
+
+const kalam = Kalam({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-kalam",
 });
 
 export const metadata: Metadata = {
   title: {
-    default: "Tehseen Dahya - Developer & Innovator",
-    template: "%s | Tehseen Dahya"
+    default: site.name,
+    template: `%s | ${site.name}`,
   },
-  description: "Student at Duke University working on technology solutions to reduce global inequity. Machine Learning, Web3, and climate tech projects.",
-  keywords: ["developer", "machine learning", "web3", "toronto", "innovation", "technology", "climate tech", "blockchain"],
-  authors: [{ name: "Tehseen Dahya" }],
-  creator: "Tehseen Dahya",
-  metadataBase: new URL("https://tehseendahya.com"),
-  icons: {
-    icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon.ico", type: "image/x-icon" }
-    ],
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
-  },
+  description: site.description,
+  authors: [{ name: site.name }],
+  creator: site.name,
+  metadataBase: new URL(site.url),
+  icons: { icon: [{ url: "/favicon.svg", type: "image/svg+xml" }] },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://tehseendahya.com",
-    title: "Tehseen Dahya - Developer & Innovator",
-    description: "Student in Toronto working on technology solutions to reduce global inequity. ML, Web3, and climate tech projects.",
-    siteName: "Tehseen Dahya",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Tehseen Dahya - Developer & Innovator",
-      },
-    ],
+    url: site.url,
+    title: site.name,
+    description: site.description,
+    siteName: site.name,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tehseen Dahya - Developer & Innovator",
-    description: "Student in Toronto working on technology solutions to reduce global inequity.",
-    images: ["/og-image.jpg"],
+    title: site.name,
+    description: site.description,
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({
@@ -69,7 +57,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} font-sans antialiased`} suppressHydrationWarning={true}>
+      <body className={`${archivo.variable} ${serif.variable} ${kalam.variable} font-sans antialiased`} suppressHydrationWarning={true}>
         <SpeedInsights />
         {children}
         <Analytics />

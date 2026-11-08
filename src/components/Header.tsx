@@ -1,85 +1,76 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { site } from "@/content/site";
 
+// Styled as the printed title block across the top of an engineering pad.
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
-  const navigation = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Projects", href: "/projects" },
-    { name: "Writing", href: "/writing" },
-  ];
+  const isCurrent = (href: string) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   return (
-    <header className="fixed top-0 w-full bg-background/80 backdrop-blur-md z-50 border-b border-border">
-      <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link href="/" className="text-xl font-bold text-foreground hover:text-primary transition-colors">
-            Tehseen Dahya
-          </Link>
+    <header className="fixed top-0 inset-x-0 z-50 bg-pad border-b-[1.5px] border-graphite">
+      <nav aria-label="Main" className="mx-auto flex h-16 max-w-6xl items-stretch">
+        <Link
+          href="/"
+          className="lettering flex flex-1 items-center px-4 text-xl text-graphite sm:px-6"
+        >
+          {site.name}
+        </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navigation.map((item) => (
+        <ul className="hidden md:flex items-stretch">
+          {site.nav.map((item) => (
+            <li key={item.name} className="flex border-l-[1.5px] border-graphite">
               <Link
-                key={item.name}
                 href={item.href}
-                className="text-foreground hover:text-primary transition-colors font-medium"
+                aria-current={isCurrent(item.href) ? "page" : undefined}
+                className={`flex w-28 items-center justify-center text-[15px] transition-colors ${
+                  isCurrent(item.href)
+                    ? "text-ballpoint underline decoration-2 underline-offset-[6px]"
+                    : "text-graphite hover:text-ballpoint"
+                }`}
               >
                 {item.name}
               </Link>
-            ))}
-          </div>
+            </li>
+          ))}
+        </ul>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            <svg
-              className="h-6 w-6"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              {isMenuOpen ? (
-                <path d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-card border border-border rounded-lg mt-2">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="block px-3 py-2 text-foreground hover:text-primary transition-colors font-medium"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-             
-            </div>
-          </div>
-        )}
+        <button
+          className="flex items-center border-l-[1.5px] border-graphite px-5 text-[15px] text-graphite md:hidden"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-expanded={isMenuOpen}
+          aria-controls="mobile-nav"
+        >
+          {isMenuOpen ? "Close" : "Menu"}
+        </button>
       </nav>
+
+      {isMenuOpen && (
+        <ul id="mobile-nav" className="border-t-[1.5px] border-graphite bg-pad md:hidden">
+          {site.nav.map((item) => (
+            <li key={item.name} className="border-b border-border last:border-b-0">
+              <Link
+                href={item.href}
+                aria-current={isCurrent(item.href) ? "page" : undefined}
+                className={`block px-4 py-3 ${
+                  isCurrent(item.href) ? "text-ballpoint" : "text-graphite"
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
     </header>
   );
 };
 
-export default Header; 
+export default Header;

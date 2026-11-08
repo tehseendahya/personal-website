@@ -1,26 +1,42 @@
 @import "tailwindcss";
 
+/*
+  Engineering notebook tokens.
+  Pad + grid come from green engineering computation paper; graphite is the pencil,
+  ballpoint is the pen used for links and margin notes.
+*/
 :root {
-  --background: #fafaf9;
-  --foreground: #292524;
-  --muted: #f5f5f4;
-  --muted-foreground: #78716c;
-  --popover: #ffffff;
-  --popover-foreground: #292524;
-  --card: #ffffff;
-  --card-foreground: #292524;
-  --border: #e7e5e4;
-  --input: #e7e5e4;
-  --primary: #0c4a6e;
-  --primary-foreground: #f0f9ff;
-  --secondary: #059669;
-  --secondary-foreground: #ecfdf5;
-  --accent: #ea580c;
-  --accent-foreground: #fff7ed;
-  --destructive: #dc2626;
-  --destructive-foreground: #fef2f2;
-  --ring: #0c4a6e;
-  --radius: 0.5rem;
+  --pad: #edf2e4;
+  --grid: #d5e0c7;
+  --grid-major: #bfcfad;
+  --graphite: #28302b;
+  --graphite-soft: #5b695e;
+  --ballpoint: #2b45c2;
+  --rule: #28302b;
+  --sheet: #f7f9f2;
+  --unit: 24px;
+
+  /* shadcn tokens, mapped onto the notebook palette for the pages not yet redesigned */
+  --background: var(--pad);
+  --foreground: var(--graphite);
+  --muted: #e3ead7;
+  --muted-foreground: var(--graphite-soft);
+  --popover: #fbfcf8;
+  --popover-foreground: var(--graphite);
+  --card: #fbfcf8;
+  --card-foreground: var(--graphite);
+  --border: #c6d3b7;
+  --input: #c6d3b7;
+  --primary: var(--ballpoint);
+  --primary-foreground: #f4f6ff;
+  --secondary: #3f7a4a;
+  --secondary-foreground: #eef6ef;
+  --accent: #2b45c2;
+  --accent-foreground: #f4f6ff;
+  --destructive: #b42318;
+  --destructive-foreground: #fef3f2;
+  --ring: var(--ballpoint);
+  --radius: 0.375rem;
 }
 
 @theme inline {
@@ -43,20 +59,235 @@
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
   --color-ring: var(--ring);
-  --font-sans: var(--font-inter);
+  --color-pad: var(--pad);
+  --color-graphite: var(--graphite);
+  --color-graphite-soft: var(--graphite-soft);
+  --color-ballpoint: var(--ballpoint);
+  --color-grid-major: var(--grid-major);
+  --font-sans: var(--font-archivo);
+  --font-pen: var(--font-kalam);
+  --font-serif: var(--font-source-serif);
+  --color-sheet: var(--sheet);
   --radius: var(--radius);
 }
 
-* {
-  border-color: var(--border);
+@layer base {
+  * {
+    border-color: var(--border);
+  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 17px;
+  line-height: var(--unit);
 }
 
+:focus-visible {
+  outline: 2px solid var(--ballpoint);
+  outline-offset: 2px;
+}
+
+/* ---------- Notebook surface ---------- */
+
+.paper {
+  background-color: var(--pad);
+  background-image:
+    linear-gradient(var(--grid-major) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-major) 1px, transparent 1px),
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size:
+    calc(var(--unit) * 5) calc(var(--unit) * 5),
+    calc(var(--unit) * 5) calc(var(--unit) * 5),
+    var(--unit) var(--unit),
+    var(--unit) var(--unit);
+  background-position: -1px -1px;
+}
+
+.lettering {
+  font-stretch: 78%;
+  font-variation-settings: "wdth" 78;
+  font-weight: 620;
+  letter-spacing: -0.012em;
+}
+
+.pen {
+  font-family: var(--font-kalam), cursive;
+  color: var(--ballpoint);
+}
+
+.ink-link {
+  color: var(--ballpoint);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  text-decoration-color: color-mix(in srgb, var(--ballpoint) 45%, transparent);
+  transition: text-decoration-color 120ms ease;
+}
+.ink-link:hover {
+  text-decoration-color: var(--ballpoint);
+  text-decoration-thickness: 2px;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/*
+  Reading surface: a plain sheet laid over the grid, so long text never sits on grid lines.
+*/
+.sheet {
+  background: var(--sheet);
+  box-shadow:
+    0 0 0 1px rgba(40, 48, 43, 0.08),
+    0 18px 40px -28px rgba(40, 48, 43, 0.35);
+}
+
+/* Long-form prose: serif body, sans lettering for headings */
+.prose-notebook {
+  font-family: var(--font-source-serif), Georgia, serif;
+  font-size: 19px;
+  line-height: 31px;
+  color: var(--graphite);
+  font-optical-sizing: auto;
+}
+.prose-notebook > * + * {
+  margin-top: 18px;
+}
+.prose-notebook h2 {
+  font-family: var(--font-archivo), system-ui, sans-serif;
+  font-stretch: 78%;
+  font-variation-settings: "wdth" 78;
+  font-weight: 620;
+  font-size: 28px;
+  line-height: 36px;
+  margin-top: 48px;
+}
+.prose-notebook h3 {
+  font-family: var(--font-archivo), system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 28px;
+  margin-top: 32px;
+}
+.prose-notebook h2 + *,
+.prose-notebook h3 + * {
+  margin-top: 10px;
+}
+.prose-notebook ul {
+  list-style: none;
+  padding-left: 0;
+}
+.prose-notebook ul > li {
+  position: relative;
+  padding-left: 22px;
+}
+.prose-notebook ul > li + li {
+  margin-top: 8px;
+}
+.prose-notebook ul > li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 14px;
+  width: 8px;
+  height: 1.5px;
+  background: var(--graphite-soft);
+}
+.prose-notebook a {
+  color: var(--ballpoint);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  text-decoration-color: color-mix(in srgb, var(--ballpoint) 45%, transparent);
+}
+.prose-notebook a:hover {
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--ballpoint);
+}
+.prose-notebook strong {
+  font-weight: 650;
+}
+.prose-notebook em {
+  font-style: italic;
+}
+
+/* Photo taped into the notebook */
+.print {
+  position: relative;
+  background: #fbfcf8;
+  padding: 10px 10px 30px;
+  transform: rotate(-1.75deg);
+  box-shadow:
+    0 1px 2px rgba(40, 48, 43, 0.18),
+    0 14px 24px -16px rgba(40, 48, 43, 0.45);
+}
+.print::before,
+.print::after {
+  content: "";
+  position: absolute;
+  top: -12px;
+  width: 84px;
+  height: 26px;
+  background: rgba(247, 243, 214, 0.62);
+  box-shadow: 0 0 0 1px rgba(40, 48, 43, 0.05);
+}
+.print::before {
+  left: -18px;
+  transform: rotate(-32deg);
+}
+.print::after {
+  right: -18px;
+  transform: rotate(28deg);
+}
+
+/* The one load moment: the margin-note arrow is drawn once */
+.draw-in {
+  stroke-dasharray: 220;
+  stroke-dashoffset: 220;
+  animation: draw 900ms cubic-bezier(0.55, 0, 0.3, 1) 450ms forwards;
+}
+.draw-in-head {
+  opacity: 0;
+  animation: appear 120ms linear 1300ms forwards;
+}
+.note-in {
+  opacity: 0;
+  animation: appear 260ms ease-out 250ms forwards;
+}
+/* The homepage map's lines get pencilled in once, on load. */
+.map-edge {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: draw 700ms cubic-bezier(0.55, 0, 0.3, 1) forwards;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes appear {
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .draw-in,
+  .draw-in-head,
+  .map-edge,
+  .note-in {
+    animation: none;
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+/* Legacy helpers still used on other pages */
 .animate-fade-in {
   animation: fadeIn 0.5s ease-in-out;
 }
@@ -82,5 +313,21 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* The map's note card: answers a click, so it's allowed to move. */
+.note-pop {
+  animation: pop 160ms ease-out;
+}
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .note-pop {
+    animation: none;
   }
 }
